@@ -1,0 +1,5 @@
+begin
+    var num:integer = 10;
+
+    answer = num * 2 + 3;
+end.

@@ -1,0 +1,49 @@
+1	<program> → <program_declaration> <program_name> <begin> <stmt_list> <end>	<program_declaration>
+2	<stmt_list> → <stmt> <stmt_list>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>
+3	<stmt_list> → <stmt>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>
+4	<stmt_list> → ε	<close_curly_brace>, <end>
+5	<stmt> → <var_list> <terminator>	<integer>, <float>, <boolean>, <character>, <character_string>
+6	<stmt> → <assignment> <terminator>	<identifier>
+7	<stmt> → <expression> <terminator>	<boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <identifier>, <input_keyword>
+8	<stmt> → <if_stmt>	<if>
+9	<stmt> → <while_stmt>	<while>
+10	<stmt> → <output> <terminator>	<print>
+11	<declaration> → <data_type> <identifier> <declaration'>	<integer>, <float>, <boolean>, <character>, <character_string>
+12	<declaration'> → <assignment_operator> <expression>	<assignment_operator>
+13	<declaration'> → ε	<identifier>, <comma>, <terminator>
+14	<assignment> → <identifier> <assignment_operator> <expression>	<identifier>
+15	<if_stmt> → <if> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>	<if>
+16	<while_stmt> → <while> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>	<while>
+17	<output> → <print> <open_parenthesis> <expression> <close_parenthesis>	<print>
+18	<input> → <input_keyword> <open_parenthesis> <expression> <close_parenthesis>	<input_keyword>
+19	<var_list> → <declaration> <identifier_list>	<integer>, <float>, <boolean>, <character>, <character_string>
+20	<identifier_list> → <identifier>	<identifier>
+21	<identifier_list> → <comma> <identifier> <identifier_list>	<comma>
+22	<identifier_list> → ε	<terminator>
+23	<expression> → <relational_expression> <expression'>	<boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <identifier>, <input_keyword>
+24	<expression'> → <logical_operator> <relational_expression> <expression'>	<logical_operator>
+25	<expression'> → ε	<close_parenthesis>, <terminator>, <identifier>, <comma>
+26	<relational_expression> → <relational_operand> <relational_expression'>	<boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <identifier>, <input_keyword>
+27	<relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>	<relational_operator>
+28	<relational_expression'> → ε	<logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+29	<relational_operand> → <boolean_constant>	<boolean_constant>
+30	<relational_operand> → <math_expression>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+31	<relational_operand> → <integer_constant>	<integer_constant>
+32	<relational_operand> → <float_constant>	<float_constant>
+33	<relational_operand> → <string_literal>	<string_literal>
+34	<relational_operand> → <character_constant>	<character_constant>
+35	<data_type> → <integer>	<integer>
+36	<data_type> → <float>	<float>
+37	<data_type> → <boolean>	<boolean>
+38	<data_type> → <character>	<character>
+39	<data_type> → <character_string>	<character_string>
+40	<math_expression> → <multiplicative_expression> <math_expression'>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+41	<math_expression'> → <additive_operator> <multiplicative_expression> <math_expression'>	<additive_operator>
+42	<math_expression'> → ε	<relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+43	<multiplicative_expression> → <term> <multiplicative_expression'>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+44	<multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>	<multiplicative_operator>
+45	<multiplicative_expression'> → ε	<additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+46	<term> → <identifier>	<identifier>
+47	<term> → <float_constant>	<float_constant>
+48	<term> → <integer_constant>	<integer_constant>
+49	<term> → <input>	<input_keyword>

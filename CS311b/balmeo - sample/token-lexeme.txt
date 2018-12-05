@@ -1,0 +1,14 @@
+<plus> -> \+
+<times> -> \*
+<eq> -> =
+<const> -> -?[0-9]+
+<semi> -> ;
+<begin> -> begin
+<end> -> end
+<type> -> integer|real
+<var> -> var
+<period> -> \.
+<colon> -> :
+<iden> -> [a-z][a-z0-9_]*
+
+

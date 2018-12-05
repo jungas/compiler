@@ -1,0 +1,54 @@
+<program_declaration>	<program_declaration>
+<program_name>	<program_name>
+<begin>	<begin>
+<end>	<end>
+ε	ε
+<terminator>	<terminator>
+<identifier>	<identifier>
+<assignment_operator>	<assignment_operator>
+<if>	<if>
+<open_parenthesis>	<open_parenthesis>
+<close_parenthesis>	<close_parenthesis>
+<open_curly_brace>	<open_curly_brace>
+<close_curly_brace>	<close_curly_brace>
+<while>	<while>
+<print>	<print>
+<input_keyword>	<input_keyword>
+<comma>	<comma>
+<logical_operator>	<logical_operator>
+<relational_operator>	<relational_operator>
+<boolean_constant>	<boolean_constant>
+<integer_constant>	<integer_constant>
+<float_constant>	<float_constant>
+<string_literal>	<string_literal>
+<character_constant>	<character_constant>
+<integer>	<integer>
+<float>	<float>
+<boolean>	<boolean>
+<character>	<character>
+<character_string>	<character_string>
+<additive_operator>	<additive_operator>
+<multiplicative_operator>	<multiplicative_operator>
+<program>	<program_declaration>
+<stmt_list>	ε, <integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>
+<declaration'>	<assignment_operator>, ε
+<assignment>	<identifier>
+<if_stmt>	<if>
+<while_stmt>	<while>
+<output>	<print>
+<input>	<input_keyword>
+<identifier_list>	<identifier>, <comma>, ε
+<expression'>	<logical_operator>, ε
+<relational_expression'>	<relational_operator>, ε
+<relational_operand>	<boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <identifier>, <input_keyword>
+<data_type>	<integer>, <float>, <boolean>, <character>, <character_string>
+<math_expression'>	<additive_operator>, ε
+<multiplicative_expression'>	<multiplicative_operator>, ε
+<term>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+<declaration>	<integer>, <float>, <boolean>, <character>, <character_string>
+<var_list>	<integer>, <float>, <boolean>, <character>, <character_string>
+<multiplicative_expression>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+<stmt>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>
+<math_expression>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+<relational_expression>	<boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <identifier>, <input_keyword>
+<expression>	<boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <identifier>, <input_keyword>

@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93df12b8-3061-46bc-801e-88a9652f9aa0" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="454771718">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="7" />
+          <entry key="txt" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+          <entry key="PLAIN_TEXT" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1941" />
+          <entry key="txt" value="62" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1941" />
+          <entry key="PLAIN_TEXT" value="62" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+    <session id="540081008">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="4153" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="4153" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1620458911">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="4" />
+          <entry key="PLAIN_TEXT" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="4" />
+          <entry key="txt" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="5955" />
+          <entry key="txt" value="46" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="5955" />
+          <entry key="PLAIN_TEXT" value="46" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1198555156">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="123" />
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="txt" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="123" />
+          <entry key="PLAIN_TEXT" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-2119184305">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="273" />
+          <entry key="txt" value="288" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="273" />
+          <entry key="PLAIN_TEXT" value="288" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="4" />
+          <entry key="txt" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="4" />
+          <entry key="PLAIN_TEXT" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+    <session id="201699516">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="21" />
+          <entry key="txt" value="22" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="21" />
+          <entry key="PLAIN_TEXT" value="22" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="13" />
+          <entry key="java" value="16983" />
+          <entry key="txt" value="1585" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="16983" />
+          <entry key="PLAIN_TEXT" value="1598" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="407" column="24" lean-forward="true" selection-start-line="407" selection-start-column="24" selection-end-line="407" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+                <element signature="e#1438#1439#0" expanded="true" />
+                <element signature="e#1469#1470#0" expanded="true" />
+                <element signature="e#1501#1502#0" expanded="true" />
+                <element signature="e#2335#2336#0" expanded="true" />
+                <element signature="e#2395#2396#0" expanded="true" />
+                <element signature="e#2426#2427#0" expanded="true" />
+                <element signature="e#2462#2463#0" expanded="true" />
+                <element signature="e#2596#2597#0" expanded="true" />
+                <element signature="e#2660#2661#0" expanded="true" />
+                <element signature="e#2691#2692#0" expanded="true" />
+                <element signature="e#2729#2730#0" expanded="true" />
+                <element signature="e#2851#2852#0" expanded="true" />
+                <element signature="e#2903#2904#0" expanded="true" />
+                <element signature="e#2934#2935#0" expanded="true" />
+                <element signature="e#2966#2967#0" expanded="true" />
+                <element signature="e#3078#3079#0" expanded="true" />
+                <element signature="e#3136#3137#0" expanded="true" />
+                <element signature="e#3167#3168#0" expanded="true" />
+                <element signature="e#3202#3203#0" expanded="true" />
+                <element signature="e#3323#3324#0" expanded="true" />
+                <element signature="e#3387#3388#0" expanded="true" />
+                <element signature="e#3418#3419#0" expanded="true" />
+                <element signature="e#3456#3457#0" expanded="true" />
+                <element signature="e#3578#3579#0" expanded="true" />
+                <element signature="e#3634#3635#0" expanded="true" />
+                <element signature="e#3665#3666#0" expanded="true" />
+                <element signature="e#3699#3700#0" expanded="true" />
+                <element signature="e#4886#4887#0" expanded="true" />
+                <element signature="e#4938#4939#0" expanded="true" />
+                <element signature="e#4971#4972#0" expanded="true" />
+                <element signature="e#5010#5011#0" expanded="true" />
+                <element signature="e#5178#5179#0" expanded="true" />
+                <element signature="e#5205#5206#0" expanded="true" />
+                <element signature="e#6744#6745#0" expanded="true" />
+                <element signature="e#6796#6797#0" expanded="true" />
+                <element signature="e#6827#6828#0" expanded="true" />
+                <element signature="e#6879#6880#0" expanded="true" />
+                <element signature="e#7029#7030#0" expanded="true" />
+                <element signature="e#7081#7082#0" expanded="true" />
+                <element signature="e#8261#8262#0" expanded="true" />
+                <element signature="e#8309#8310#0" expanded="true" />
+                <element signature="e#9772#9773#0" expanded="true" />
+                <element signature="e#11198#11199#0" expanded="true" />
+                <element signature="e#11225#11226#0" expanded="true" />
+                <element signature="e#11660#11661#0" expanded="true" />
+                <element signature="e#11734#11735#0" expanded="true" />
+                <element signature="e#13699#13700#0" expanded="true" />
+                <element signature="e#13726#13727#0" expanded="true" />
+                <element signature="e#14808#14809#0" expanded="true" />
+                <element signature="e#14862#14863#0" expanded="true" />
+                <element signature="e#14895#14896#0" expanded="true" />
+                <element signature="e#14941#14942#0" expanded="true" />
+                <element signature="e#15133#15134#0" expanded="true" />
+                <element signature="e#15207#15208#0" expanded="true" />
+                <element signature="e#15240#15241#0" expanded="true" />
+                <element signature="e#15290#15291#0" expanded="true" />
+                <element signature="e#15475#15476#0" expanded="true" />
+                <element signature="e#15529#15530#0" expanded="true" />
+                <element signature="e#15562#15563#0" expanded="true" />
+                <element signature="e#15608#15609#0" expanded="true" />
+                <element signature="e#15789#15790#0" expanded="true" />
+                <element signature="e#15841#15842#0" expanded="true" />
+                <element signature="e#15874#15875#0" expanded="true" />
+                <element signature="e#15918#15919#0" expanded="true" />
+                <element signature="e#16099#16100#0" expanded="true" />
+                <element signature="e#16151#16152#0" expanded="true" />
+                <element signature="e#16184#16185#0" expanded="true" />
+                <element signature="e#16228#16229#0" expanded="true" />
+                <element signature="e#16417#16418#0" expanded="true" />
+                <element signature="e#16473#16474#0" expanded="true" />
+                <element signature="e#16506#16507#0" expanded="true" />
+                <element signature="e#16554#16555#0" expanded="true" />
+                <element signature="e#16797#16798#0" expanded="true" />
+                <element signature="e#16839#16840#0" expanded="true" />
+                <element signature="e#16872#16873#0" expanded="true" />
+                <element signature="e#16906#16907#0" expanded="true" />
+                <element signature="e#17295#17296#0" expanded="true" />
+                <element signature="e#17353#17354#0" expanded="true" />
+                <element signature="e#18576#18577#0" expanded="true" />
+                <element signature="e#18610#18611#0" expanded="true" />
+                <element signature="e#18625#18626#0" expanded="true" />
+                <element signature="e#18658#18659#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/program.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/EXPRESSION.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyInterpreter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-608">
+              <caret line="226" column="11" selection-start-line="226" selection-start-column="8" selection-end-line="226" selection-end-column="11" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1943#1944#0" expanded="true" />
+                <element signature="e#2005#2006#0" expanded="true" />
+                <element signature="e#2036#2037#0" expanded="true" />
+                <element signature="e#2073#2074#0" expanded="true" />
+                <element signature="e#4006#4007#0" expanded="true" />
+                <element signature="e#4062#4063#0" expanded="true" />
+                <element signature="e#4323#4324#0" expanded="true" />
+                <element signature="e#4389#4390#0" expanded="true" />
+                <element signature="e#5359#5360#0" expanded="true" />
+                <element signature="e#5417#5418#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>prime</find>
+      <find>Object interpret</find>
+      <find>TERM</find>
+      <find>new TERM</find>
+      <find>while</find>
+      <find>new RELATIONAL_EXPR</find>
+      <find>const</find>
+      <find>term</find>
+      <find>literal</find>
+      <find>\&lt;program\&gt;\	\$\n\&lt;stmt_list\&gt;\	\&lt;close_curly_brace\&gt;\, \&lt;end\&gt;\n\&lt;stmt\&gt;\	\&lt;terminator\&gt;\, \&lt;integer\&gt;\, \&lt;float\&gt;\, \&lt;boolean\&gt;\, \&lt;character\&gt;\, \&lt;character_string\&gt;\, \&lt;identifier\&gt;\, \&lt;if\&gt;\, \&lt;input_keyword\&gt;\, \&lt;float_constant\&gt;\, \&lt;integer_constant\&gt;\, \&lt;print\&gt;\, \&lt;boolean_constant\&gt;\, \&lt;string_literal\&gt;\, \&lt;character_constant\&gt;\, \&lt;relational_operator\&gt;\, \&lt;logical_operator\&gt;\, \&lt;while\&gt;\, \&lt;close_curly_brace\&gt;\, \&lt;end\&gt;\n\&lt;declaration\&gt;\	\&lt;terminator\&gt;\n\&lt;declaration\'\&gt;\	\&lt;terminator\&gt;\n\&lt;data_type\&gt;\	\&lt;identifier\&gt;\n\&lt;assignment\&gt;\	\&lt;terminator\&gt;\n\&lt;expression\&gt;\	\&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\, \&lt;close_parenthesis\&gt;\n\&lt;math_expression\&gt;\	\&lt;relational_operator\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;logical_operator\&gt;\n\&lt;math_expression\'\&gt;\	\&lt;relational_operator\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;logical_operator\&gt;\n\&lt;multiplicative_expression\&gt;\	\&lt;additive_operator\&gt;\, \&lt;relational_operator\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;logical_operator\&gt;\n\&lt;multiplicative_expression\'\&gt;\	\&lt;additive_operator\&gt;\, \&lt;relational_operator\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;logical_operator\&gt;\n\&lt;term\&gt;\	\&lt;multiplicative_operator\&gt;\, \&lt;additive_operator\&gt;\, \&lt;relational_operator\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;logical_operator\&gt;\n\&lt;logical_expression\&gt;\	\&lt;close_parenthesis\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\n\&lt;logical_expression\'\&gt;\	\&lt;close_parenthesis\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\n\&lt;relational_expression\&gt;\	\&lt;logical_operator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\n\&lt;relational_expression\'\&gt;\	\&lt;logical_operator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\n\&lt;relational_operand\&gt;\	\&lt;relational_operator\&gt;\, \&lt;logical_operator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\n\&lt;if_stmt\&gt;\	\&lt;terminator\&gt;\, \&lt;integer\&gt;\, \&lt;float\&gt;\, \&lt;boolean\&gt;\, \&lt;character\&gt;\, \&lt;character_string\&gt;\, \&lt;identifier\&gt;\, \&lt;if\&gt;\, \&lt;input_keyword\&gt;\, \&lt;float_constant\&gt;\, \&lt;integer_constant\&gt;\, \&lt;print\&gt;\, \&lt;boolean_constant\&gt;\, \&lt;string_literal\&gt;\, \&lt;character_constant\&gt;\, \&lt;relational_operator\&gt;\, \&lt;logical_operator\&gt;\, \&lt;while\&gt;\, \&lt;close_curly_brace\&gt;\, \&lt;end\&gt;\n\&lt;literal\&gt;\	\&lt;logical_operator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;terminator\&gt;\n\&lt;while_stmt\&gt;\	\&lt;terminator\&gt;\, \&lt;integer\&gt;\, \&lt;float\&gt;\, \&lt;boolean\&gt;\, \&lt;character\&gt;\, \&lt;character_string\&gt;\, \&lt;identifier\&gt;\, \&lt;if\&gt;\, \&lt;input_keyword\&gt;\, \&lt;float_constant\&gt;\, \&lt;integer_constant\&gt;\, \&lt;print\&gt;\, \&lt;boolean_constant\&gt;\, \&lt;string_literal\&gt;\, \&lt;character_constant\&gt;\, \&lt;relational_operator\&gt;\, \&lt;logical_operator\&gt;\, \&lt;while\&gt;\, \&lt;close_curly_brace\&gt;\, \&lt;end\&gt;\n\&lt;input\&gt;\	\&lt;terminator\&gt;\, \&lt;relational_operator\&gt;\, \&lt;logical_operator\&gt;\, \&lt;close_parenthesis\&gt;\, \&lt;assignment_operator\&gt;\n\&lt;prompt\&gt;\	\&lt;close_parenthesis\&gt;\n\&lt;output\&gt;\	\&lt;terminator\&gt;\, \&lt;assignment_operator\&gt;\, \&lt;close_parenthesis\&gt;\n\&lt;output_parameter\&gt;\	\&lt;close_parenthesis\&gt;\n\&lt;var_list\&gt;\	\&lt;terminator\&gt;\n\&lt;identifier_list\&gt;\	\&lt;terminator\&gt;</find>
+      <find>boolean_constant</find>
+      <find>boolean</find>
+      <find>logical_operator</find>
+      <find>input</find>
+      <find>character</find>
+      <find>class term</find>
+      <find>data</find>
+      <find>Variabl v</find>
+      <find>expr</find>
+      <find>assign</find>
+      <find>expression</find>
+      <find>MATH_EXPRESSION</find>
+      <find>&quot;&lt;</find>
+      <find>&lt;type&gt;</find>
+      <find>expr_1</find>
+      <find>declaration</find>
+      <find>var_list</find>
+      <find>print</find>
+      <find>EXPR {</find>
+      <find>var</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>EPSILON</replace>
+      <replace>xxxx</replace>
+      <replace>RELATIONAL_EXPR.construct</replace>
+      <replace>EXPRESSION</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Hello.java" />
+        <option value="$PROJECT_DIR$/grammar (fixed).txt" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Terminal.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Nonterminal.java" />
+        <option value="$PROJECT_DIR$/first set.txt" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Symbol.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/ComplexShape.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Token.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Viewer.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Parser.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Scanner.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/ParseTreeViewer.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter1.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/MyInterpreter.java" />
+        <option value="$PROJECT_DIR$/src/Interpreter.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/EXPRESSION.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/MATH_EXPRESSION.java" />
+        <option value="$PROJECT_DIR$/token-lexeme.txt" />
+        <option value="$PROJECT_DIR$/grammar.txt" />
+        <option value="$PROJECT_DIR$/first.txt" />
+        <option value="$PROJECT_DIR$/follow.txt" />
+        <option value="$PROJECT_DIR$/predict.txt" />
+        <option value="$PROJECT_DIR$/Interpreter.java" />
+        <option value="$PROJECT_DIR$/MyInterpreter.java" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java" />
+        <option value="$PROJECT_DIR$/program.txt" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="1303" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CS311b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS311b" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS311b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS311b" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS311b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS311b" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs311b" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543657403731" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\P_Darson\Desktop\CS311b\src\edu\slu\cs311b" />
+      <recent name="C:\Users\P_Darson\Desktop\CS311b" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.CompilerDesign">
+    <configuration name="CompilerDesign" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.slu.cs311b.CompilerDesign" />
+      <module name="CS311b" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComplexShape" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.slu.cs311b.ComplexShape" />
+      <module name="CS311b" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParseTreeViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.slu.cs311b.ParseTreeViewer" />
+      <module name="CS311b" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Parser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.slu.cs311b.Parser" />
+      <module name="CS311b" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scanner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.slu.cs311b.Scanner" />
+      <module name="CS311b" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Viewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.slu.cs311b.Viewer" />
+      <module name="CS311b" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CompilerDesign" />
+      <item itemvalue="Application.Viewer" />
+      <item itemvalue="Application.Scanner" />
+      <item itemvalue="Application.Parser" />
+      <item itemvalue="Application.ComplexShape" />
+      <item itemvalue="Application.ParseTreeViewer" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ParseTreeViewer" />
+        <item itemvalue="Application.Viewer" />
+        <item itemvalue="Application.Parser" />
+        <item itemvalue="Application.ComplexShape" />
+        <item itemvalue="Application.Scanner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93df12b8-3061-46bc-801e-88a9652f9aa0" name="Default Changelist" comment="" />
+      <created>1540272919689</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540272919689</updated>
+      <workItem from="1540344039512" duration="6089000" />
+      <workItem from="1540360536109" duration="3133000" />
+      <workItem from="1540515776485" duration="10575000" />
+      <workItem from="1540532105632" duration="476000" />
+      <workItem from="1540533682977" duration="1783000" />
+      <workItem from="1540790199991" duration="666000" />
+      <workItem from="1540792880381" duration="1799000" />
+      <workItem from="1543564325540" duration="1498000" />
+      <workItem from="1543570744092" duration="6077000" />
+      <workItem from="1543637922791" duration="18775000" />
+      <workItem from="1543658086743" duration="12766000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="63637000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16644295" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32907802" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38865247" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32765958" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Tool Output" order="12" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Scanner.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Hello.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Terminal.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Nonterminal.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/ComplexShape.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Viewer.java" />
+    <entry file="file://$PROJECT_DIR$/grammar (fixed).txt" />
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/ParseTreeViewer.java" />
+    <entry file="file://$PROJECT_DIR$/newfile.txt" />
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyInterpreter.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Symbol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="554" selection-start-line="554" selection-end-line="554" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Variable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="53" column="143" selection-start-line="53" selection-start-column="143" selection-end-line="53" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/follow.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="22" column="155" selection-start-line="22" selection-start-column="155" selection-end-line="22" selection-end-column="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="29" column="41" selection-end-line="48" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token-lexeme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/program.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/EXPRESSION.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyInterpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-608">
+          <caret line="226" column="11" selection-start-line="226" selection-start-column="8" selection-end-line="226" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#2005#2006#0" expanded="true" />
+            <element signature="e#2036#2037#0" expanded="true" />
+            <element signature="e#2073#2074#0" expanded="true" />
+            <element signature="e#4006#4007#0" expanded="true" />
+            <element signature="e#4062#4063#0" expanded="true" />
+            <element signature="e#4323#4324#0" expanded="true" />
+            <element signature="e#4389#4390#0" expanded="true" />
+            <element signature="e#5359#5360#0" expanded="true" />
+            <element signature="e#5417#5418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="407" column="24" lean-forward="true" selection-start-line="407" selection-start-column="24" selection-end-line="407" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1438#1439#0" expanded="true" />
+            <element signature="e#1469#1470#0" expanded="true" />
+            <element signature="e#1501#1502#0" expanded="true" />
+            <element signature="e#2335#2336#0" expanded="true" />
+            <element signature="e#2395#2396#0" expanded="true" />
+            <element signature="e#2426#2427#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#2660#2661#0" expanded="true" />
+            <element signature="e#2691#2692#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+            <element signature="e#2851#2852#0" expanded="true" />
+            <element signature="e#2903#2904#0" expanded="true" />
+            <element signature="e#2934#2935#0" expanded="true" />
+            <element signature="e#2966#2967#0" expanded="true" />
+            <element signature="e#3078#3079#0" expanded="true" />
+            <element signature="e#3136#3137#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3202#3203#0" expanded="true" />
+            <element signature="e#3323#3324#0" expanded="true" />
+            <element signature="e#3387#3388#0" expanded="true" />
+            <element signature="e#3418#3419#0" expanded="true" />
+            <element signature="e#3456#3457#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
+            <element signature="e#3634#3635#0" expanded="true" />
+            <element signature="e#3665#3666#0" expanded="true" />
+            <element signature="e#3699#3700#0" expanded="true" />
+            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
+            <element signature="e#4971#4972#0" expanded="true" />
+            <element signature="e#5010#5011#0" expanded="true" />
+            <element signature="e#5178#5179#0" expanded="true" />
+            <element signature="e#5205#5206#0" expanded="true" />
+            <element signature="e#6744#6745#0" expanded="true" />
+            <element signature="e#6796#6797#0" expanded="true" />
+            <element signature="e#6827#6828#0" expanded="true" />
+            <element signature="e#6879#6880#0" expanded="true" />
+            <element signature="e#7029#7030#0" expanded="true" />
+            <element signature="e#7081#7082#0" expanded="true" />
+            <element signature="e#8261#8262#0" expanded="true" />
+            <element signature="e#8309#8310#0" expanded="true" />
+            <element signature="e#9772#9773#0" expanded="true" />
+            <element signature="e#11198#11199#0" expanded="true" />
+            <element signature="e#11225#11226#0" expanded="true" />
+            <element signature="e#11660#11661#0" expanded="true" />
+            <element signature="e#11734#11735#0" expanded="true" />
+            <element signature="e#13699#13700#0" expanded="true" />
+            <element signature="e#13726#13727#0" expanded="true" />
+            <element signature="e#14808#14809#0" expanded="true" />
+            <element signature="e#14862#14863#0" expanded="true" />
+            <element signature="e#14895#14896#0" expanded="true" />
+            <element signature="e#14941#14942#0" expanded="true" />
+            <element signature="e#15133#15134#0" expanded="true" />
+            <element signature="e#15207#15208#0" expanded="true" />
+            <element signature="e#15240#15241#0" expanded="true" />
+            <element signature="e#15290#15291#0" expanded="true" />
+            <element signature="e#15475#15476#0" expanded="true" />
+            <element signature="e#15529#15530#0" expanded="true" />
+            <element signature="e#15562#15563#0" expanded="true" />
+            <element signature="e#15608#15609#0" expanded="true" />
+            <element signature="e#15789#15790#0" expanded="true" />
+            <element signature="e#15841#15842#0" expanded="true" />
+            <element signature="e#15874#15875#0" expanded="true" />
+            <element signature="e#15918#15919#0" expanded="true" />
+            <element signature="e#16099#16100#0" expanded="true" />
+            <element signature="e#16151#16152#0" expanded="true" />
+            <element signature="e#16184#16185#0" expanded="true" />
+            <element signature="e#16228#16229#0" expanded="true" />
+            <element signature="e#16417#16418#0" expanded="true" />
+            <element signature="e#16473#16474#0" expanded="true" />
+            <element signature="e#16506#16507#0" expanded="true" />
+            <element signature="e#16554#16555#0" expanded="true" />
+            <element signature="e#16797#16798#0" expanded="true" />
+            <element signature="e#16839#16840#0" expanded="true" />
+            <element signature="e#16872#16873#0" expanded="true" />
+            <element signature="e#16906#16907#0" expanded="true" />
+            <element signature="e#17295#17296#0" expanded="true" />
+            <element signature="e#17353#17354#0" expanded="true" />
+            <element signature="e#18576#18577#0" expanded="true" />
+            <element signature="e#18610#18611#0" expanded="true" />
+            <element signature="e#18625#18626#0" expanded="true" />
+            <element signature="e#18658#18659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CS311b</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

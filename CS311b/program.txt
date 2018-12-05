@@ -1,0 +1,4 @@
+program SampleProgram
+begin
+    print("hello");
+end

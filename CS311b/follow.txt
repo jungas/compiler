@@ -1,0 +1,23 @@
+<program>	$
+<stmt_list>	<close_curly_brace>, <end>
+<stmt>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>, <close_curly_brace>, <end>
+<declaration>	<identifier>, <comma>, <terminator>
+<declaration'>	<identifier>, <comma>, <terminator>
+<assignment>	<terminator>
+<if_stmt>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>, <close_curly_brace>, <end>
+<while_stmt>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>, <close_curly_brace>, <end>
+<output>	<terminator>
+<input>	<multiplicative_operator>, <additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<var_list>	<terminator>
+<identifier_list>	<terminator>
+<expression>	<close_parenthesis>, <terminator>, <identifier>, <comma>
+<expression'>	<close_parenthesis>, <terminator>, <identifier>, <comma>
+<relational_expression>	<logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<relational_expression'>	<logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<relational_operand>	<relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<data_type>	<identifier>
+<math_expression>	<relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<math_expression'>	<relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<multiplicative_expression>	<additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<multiplicative_expression'>	<additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<term>	<multiplicative_operator>, <additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>

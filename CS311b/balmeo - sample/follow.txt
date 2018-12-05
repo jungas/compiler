@@ -1,0 +1,12 @@
+<program>	$
+<stmt-list>	<end>
+<stmt-list'>	<end>
+<stmt>	<iden>, <var>, <end>
+<assign>	<iden>, <var>, <end>
+<expr1>	<semi>
+<expr1'>	<semi>
+<expr2>	<plus>, <semi>
+<expr2'>	<plus>, <semi>
+<declaration>	<iden>, <var>, <end>
+<initial_value>	<semi>
+<term>	<times>, <semi>, <plus>

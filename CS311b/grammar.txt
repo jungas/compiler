@@ -1,0 +1,37 @@
+<program> -> <program_declaration> <program_name> <begin> <stmt_list> <end>
+
+<stmt_list> -> <stmt> <stmt_list> | <stmt> | EPSILON
+<stmt> -> <var_list> <terminator> | <assignment> <terminator> | <expression> <terminator> | <if_stmt> | <while_stmt> | <output> <terminator>
+
+<declaration> -> <data_type> <identifier> <declaration'>
+<declaration'> -> <assignment_operator> <expression> | EPSILON
+
+<assignment> -> <identifier> <assignment_operator> <expression>
+
+<if_stmt> -> <if> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
+
+<while_stmt> -> <while> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
+
+<output> -> <print> <open_parenthesis> <expression> <close_parenthesis>
+
+<input> -> <input_keyword> <open_parenthesis> <expression> <close_parenthesis>
+
+<var_list> -> <declaration> <identifier_list>
+<identifier_list> -> <identifier> | <comma> <identifier> <identifier_list> | EPSILON
+
+<expression> -> <relational_expression> <expression'>
+<expression'> -> <logical_operator> <relational_expression> <expression'> | EPSILON
+
+<relational_expression> -> <relational_operand> <relational_expression'>
+<relational_expression'> -> <relational_operator> <relational_operand> <relational_expression'> | EPSILON
+<relational_operand> -> <boolean_constant> |<math_expression> | <integer_constant> | <float_constant> | <string_literal> | <character_constant>
+
+<data_type> -> <integer> | <float> | <boolean> | <character> | <character_string>
+
+<math_expression> -> <multiplicative_expression> <math_expression'>
+<math_expression'> -> <additive_operator> <multiplicative_expression> <math_expression'>
+<math_expression'> -> EPSILON
+<multiplicative_expression> -> <term> <multiplicative_expression'>
+<multiplicative_expression'> -> <multiplicative_operator> <term> <multiplicative_expression'>
+<multiplicative_expression'> -> EPSILON
+<term> -> <identifier> | <float_constant> | <integer_constant> | <input>

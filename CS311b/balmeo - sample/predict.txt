@@ -1,0 +1,18 @@
+1	<program> → <begin> <stmt-list> <end> <period>	<begin>
+2	<stmt-list> → <stmt> <stmt-list'>	<iden>, <var>
+3	<stmt-list'> → <stmt> <stmt-list'>	<iden>, <var>
+4	<stmt-list'> → ε	<end>
+5	<stmt> → <assign>	<iden>
+6	<stmt> → <declaration>	<var>
+7	<assign> → <iden> <eq> <expr1> <semi>	<iden>
+8	<expr1> → <expr2> <expr1'>	<iden>, <const>
+9	<expr1'> → <plus> <expr2> <expr1'>	<plus>
+10	<expr1'> → ε	<semi>
+11	<expr2> → <term> <expr2'>	<iden>, <const>
+12	<expr2'> → <times> <term> <expr2'>	<times>
+13	<expr2'> → ε	<plus>, <semi>
+14	<declaration> → <var> <iden> <colon> <type> <initial_value> <semi>	<var>
+15	<initial_value> → <eq> <term>	<eq>
+16	<initial_value> → ε	<semi>
+17	<term> → <iden>	<iden>
+18	<term> → <const>	<const>

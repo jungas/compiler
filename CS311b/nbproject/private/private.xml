@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <file>
+            <url>src/edu/slu/cs311b/Interpreter.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>68</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/edu/slu/cs311b/Viewer.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>184</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/predict.txt</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/src/edu/slu/cs311b/CompilerDesign.java</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/src/edu/slu/cs311b/MyInterpreter.java</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/program.txt</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/grammar.txt</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/src/edu/slu/cs311b/Symbol.java</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/src/edu/slu/cs311b/Parser.java</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/src/edu/slu/cs311b/Scanner.java</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/src/edu/slu/cs311b/Variable.java</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/token-lexeme.txt</file>
+            <file>file:/C:/Users/SCISIT1/Documents/NetBeansProjects/CS311b/src/edu/slu/cs311b/Interpreter.java</file>
+        </group>
+    </open-files>
+</project-private>

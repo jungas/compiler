@@ -1,0 +1,25 @@
+<begin>	<begin>
+<end>	<end>
+<period>	<period>
+ε	ε
+<iden>	<iden>
+<eq>	<eq>
+<semi>	<semi>
+<plus>	<plus>
+<times>	<times>
+<var>	<var>
+<colon>	<colon>
+<type>	<type>
+<const>	<const>
+<program>	<begin>
+<stmt-list'>	ε, <iden>, <var>
+<assign>	<iden>
+<expr1'>	<plus>, ε
+<expr2'>	<times>, ε
+<declaration>	<var>
+<initial_value>	<eq>, ε
+<term>	<iden>, <const>
+<stmt>	<iden>, <var>
+<expr2>	<iden>, <const>
+<expr1>	<iden>, <const>
+<stmt-list>	<iden>, <var>

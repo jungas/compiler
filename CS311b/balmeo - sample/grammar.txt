@@ -1,0 +1,18 @@
+<program> -> <begin> <stmt-list> <end> <period>
+<stmt-list> -> <stmt> <stmt-list'>
+<stmt-list'> -> <stmt> <stmt-list'>
+<stmt-list'> -> EPSILON
+<stmt> -> <assign>
+<stmt> -> <declaration>
+<assign> -> <iden> <eq> <expr1> <semi>
+<expr1> -> <expr2> <expr1'>
+<expr1'> -> <plus> <expr2> <expr1'>
+<expr1'> -> EPSILON
+<expr2> -> <term> <expr2'>
+<expr2'> -> <times> <term> <expr2'>
+<expr2'> -> EPSILON
+<declaration> -> <var> <iden> <colon> <type> <initial_value> <semi>
+<initial_value> -> <eq> <term>
+<initial_value> -> EPSILON
+<term> -> <iden>
+<term> -> <const>
