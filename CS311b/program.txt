@@ -1,4 +1,5 @@
 program SampleProgram
 begin
     print("hello");
+    print("HI");
 end

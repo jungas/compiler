@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Interpreter {
     public static void interpret(Symbol root) {
         PROGRAM p = new PROGRAM(root);
-
         p.interpret();
     }
 }
@@ -406,7 +405,11 @@ class EXPR {
     }
 
     Object interpret() {
-        return expr_prime.interpret(relational_expr);
+        Object result = expr_prime.interpret(relational_expr);
+        if (result == null) {
+            result = relational_expr.interpret();
+        }
+        return result;
     }
 }
 
@@ -470,7 +473,11 @@ class RELATIONAL_EXPR {
     }
 
     Object interpret() {
-        return relational_expr_prime.interpret(relational_operand);
+        Object result = relational_expr_prime.interpret(relational_operand);
+        if (result == null) {
+            result = relational_operand.interpret();
+        }
+        return result;
     }
 }
 
@@ -612,11 +619,12 @@ class RELATIONAL_OPERAND_5 extends RELATIONAL_OPERAND {
     private Symbol string_literal;
 
     RELATIONAL_OPERAND_5(Symbol lhs) {
+
         string_literal = lhs.children.get(0);
     }
 
     public String interpret() {
-        return string_literal.lexeme;
+        return string_literal.lexeme.substring(1, string_literal.lexeme.length() - 1);
     }
 }
 
