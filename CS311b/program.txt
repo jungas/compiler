@@ -1,5 +1,5 @@
 program SampleProgram
 begin
-    print("hello");
-    print("HI");
+    string x = "ha";
+    print(x);
 end

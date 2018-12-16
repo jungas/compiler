@@ -12,8 +12,8 @@ public class CompilerDesign {
 
         Symbol root = Parser.parse(source);
 
-        Interpreter.interpret(root);
         ParseTreeViewer.show(root);
+        Interpreter.interpret(root);
     }
 
 }

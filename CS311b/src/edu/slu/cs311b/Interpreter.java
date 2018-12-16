@@ -267,7 +267,7 @@ class IF_STMT {
     }
 
     void interpret() {
-        if ((boolean)expr.interpret()) {
+        if ((boolean) expr.interpret()) {
             stmt_list.interpret();
         }
     }
@@ -284,7 +284,7 @@ class WHILE_STMT {
     }
 
     void interpret() {
-        while ((boolean)expr.interpret()) {
+        while ((boolean) expr.interpret()) {
             stmt_list.interpret();
         }
     }
@@ -311,7 +311,7 @@ class INPUT {
         expr = new EXPR(lhs.children.get(2));
     }
 
-    public Object interpret() {
+    public String interpret() {
         System.out.println(expr.interpret());
         return new Scanner(System.in).nextLine();
     }
@@ -446,7 +446,7 @@ class EXPR_PRIME_1 extends EXPR_PRIME {
 //        } else if (logical_operator.lexeme.equals("or")) {
 //            return this.relational_expr.interpret() || relational_expr.interpret();
 //        } else {
-            return expr_prime.interpret(relational_expr);
+        return expr_prime.interpret(relational_expr);
 //        }
     }
 }
@@ -562,7 +562,7 @@ abstract class RELATIONAL_OPERAND {
     public abstract Object interpret();
 }
 
-// 29   <relational_operand> → <float_constant>
+// 29   <relational_operand> → <boolean_constant>
 class RELATIONAL_OPERAND_1 extends RELATIONAL_OPERAND {
     private Symbol boolean_constant;
 
@@ -570,8 +570,8 @@ class RELATIONAL_OPERAND_1 extends RELATIONAL_OPERAND {
         boolean_constant = lhs.children.get(0);
     }
 
-    public String interpret() {
-        return boolean_constant.lexeme;
+    public Boolean interpret() {
+        return Boolean.parseBoolean(boolean_constant.lexeme);
     }
 }
 
@@ -664,6 +664,7 @@ class DATA_TYPE {
 // 43   <multiplicative_expression> → <term> <multiplicative_expression'>
 // 44   <multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>
 // 45   <multiplicative_expression'> → ε
+
 class MATH_EXPRESSION {
     private LinkedList<Symbol> expression;
     private java.util.Deque<Integer> operands = new LinkedList();
@@ -673,11 +674,12 @@ class MATH_EXPRESSION {
     }
 
     int interpret() {
+        LinkedList<Symbol> copy = new LinkedList<>(expression);
         while (!expression.isEmpty()) {
             Symbol sym = expression.removeFirst();
-            if (sym.type.equals("<term>")) {
-                operands.push(Integer.parseInt(new TERM(sym).interpret()));
-            } else {
+            if (sym.parent.type.equals("<term>")){
+                operands.push((int) Math.floor(Float.parseFloat(TERM.construct(sym).interpret())));
+            }else {
                 int operand2 = operands.pop();
                 int operand1 = operands.pop();
 
@@ -700,21 +702,85 @@ class MATH_EXPRESSION {
                 }
             }
         }
+        expression.addAll(copy);
 
         return operands.pop();
     }
 }
-// 46   <term> → <identifier>
-// 47   <term> → <float_constant>
-// 48   <term> → <integer_constant>
-// 49   <term> → <input>
-class TERM{
-    Symbol term;
-    TERM(Symbol sym){
-        term = sym.children.get(0);
+
+
+abstract class TERM {
+    static String type;
+
+    public static TERM construct(Symbol sym) {
+        type = sym.type;
+        switch (sym.type) {
+            case "<identifier>":
+                return new TERM_1(sym);
+            case "<float_constant>":
+                return new TERM_2(sym);
+            case "<integer_constant>":
+                return new TERM_3(sym);
+            case "<input>":
+                return new TERM_4(sym);
+            default:
+                return null;
+        }
     }
-    String interpret(){
-        return term.lexeme;
+
+    public abstract String interpret();
+}
+
+// 46   <term> → <identifier>
+class TERM_1 extends TERM {
+    Symbol identifier;
+
+    public TERM_1(Symbol lhs) {
+        identifier = lhs.children.get(0);
+    }
+
+    public String interpret() {
+        return Variable.symbolTable.get(identifier.lexeme).value + "";
+    }
+}
+
+// 47   <term> → <float_constant>
+
+class TERM_2 extends TERM {
+    Symbol float_constant;
+
+    public TERM_2(Symbol lhs) {
+        float_constant = lhs.children.get(0);
+    }
+
+    public String interpret() {
+        return float_constant.lexeme;
+    }
+}
+
+// 48   <term> → <integer_constant>
+class TERM_3 extends TERM {
+    Symbol integer_constant;
+
+    public TERM_3(Symbol lhs) {
+        integer_constant = lhs.children.get(0);
+    }
+
+    public String interpret() {
+        return integer_constant.lexeme;
+    }
+}
+
+// 49   <term> → <input>
+class TERM_4 extends TERM {
+    INPUT input;
+
+    public TERM_4(Symbol lhs) {
+        input = new INPUT(lhs);
+    }
+
+    public String interpret() {
+        return input.interpret();
     }
 }
 
