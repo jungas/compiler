@@ -1,6 +1,5 @@
 package edu.slu.cs311b;
 
-
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -11,7 +10,7 @@ public class Interpreter {
     }
 }
 
-// 1   <program> → <program_declaration> <program_name> <begin> <stmt_list> <end>
+// Rule No. 1   <program> → <program_declaration> <program_name> <begin> <stmt_list> <end>
 class PROGRAM {
     private STMT_LIST stmtList;
 
@@ -41,7 +40,7 @@ abstract class STMT_LIST {
     public abstract void interpret();
 }
 
-// 2    <stmt_list> → <stmt> <stmt_list>
+// Rule No. 2   <stmt_list> → <stmt> <stmt_list>
 class STMT_LIST_1 extends STMT_LIST {
     private STMT stmt;
     private STMT_LIST stmt_list;
@@ -57,7 +56,7 @@ class STMT_LIST_1 extends STMT_LIST {
     }
 }
 
-// 3    <stmt_list> → <stmt>
+// Rule No. 3   <stmt_list> → <stmt>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <integer_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>
 class STMT_LIST_2 extends STMT_LIST {
     private STMT stmt;
 
@@ -70,7 +69,7 @@ class STMT_LIST_2 extends STMT_LIST {
     }
 }
 
-// 4    <stmt_list> → ε
+// Rule No. 4   <stmt_list> → ε	<close_curly_brace>, <end>
 class STMT_LIST_3 extends STMT_LIST {
     STMT_LIST_3() {
     }
@@ -102,7 +101,7 @@ abstract class STMT {
     abstract void interpret();
 }
 
-// 5    <stmt> → <var_list> <terminator>
+// Rule No. 5   <stmt> → <var_list> <terminator>
 class STMT_1 extends STMT {
     private VAR_LIST var_list;
 
@@ -115,7 +114,7 @@ class STMT_1 extends STMT {
     }
 }
 
-// 6    <stmt> → <assignment> <terminator>
+// Rule No. 6   <stmt> → <assignment> <terminator>
 class STMT_2 extends STMT {
     private ASSIGNMENT assignment;
 
@@ -128,7 +127,7 @@ class STMT_2 extends STMT {
     }
 }
 
-// 7    <stmt> → <expression> <terminator>
+// Rule No. 7   <stmt> → <expression> <terminator>
 class STMT_3 extends STMT {
     private EXPR expr;
 
@@ -141,7 +140,7 @@ class STMT_3 extends STMT {
     }
 }
 
-// 8    <stmt> → <if_stmt>
+// Rule No. 8   <stmt> → <if_stmt>
 class STMT_4 extends STMT {
     private IF_STMT if_stmt;
 
@@ -154,7 +153,7 @@ class STMT_4 extends STMT {
     }
 }
 
-// 9    <stmt> → <while_stmt>
+// Rule No. 9   <stmt> → <while_stmt>
 class STMT_5 extends STMT {
     private WHILE_STMT while_stmt;
 
@@ -167,7 +166,7 @@ class STMT_5 extends STMT {
     }
 }
 
-// 10   <stmt> → <output> <terminator>
+// Rule No. 10	<stmt> → <output> <terminator>
 class STMT_6 extends STMT {
     private OUTPUT output;
 
@@ -180,7 +179,7 @@ class STMT_6 extends STMT {
     }
 }
 
-// 11   <declaration> → <data_type> <identifier> <declaration'>
+// Rule No. 11	<declaration> → <data_type> <identifier> <declaration'>
 class DECLARATION {
     DATA_TYPE data_type;
     private Symbol identifier;
@@ -214,7 +213,7 @@ abstract class DECLARATION_PRIME {
     public abstract Object interpret();
 }
 
-// 12   <declaration'> → <assignment_operator> <expression>
+// Rule No. 12	<declaration'> → <assignment_operator> <expression>
 class DECLARATION_PRIME_1 extends DECLARATION_PRIME {
     private EXPR expr;
 
@@ -227,7 +226,7 @@ class DECLARATION_PRIME_1 extends DECLARATION_PRIME {
     }
 }
 
-// 13   <declaration'> → ε
+// Rule No. 13	<declaration'> → ε
 class DECLARATION_PRIME_2 extends DECLARATION_PRIME {
     DECLARATION_PRIME_2() {
     }
@@ -237,7 +236,7 @@ class DECLARATION_PRIME_2 extends DECLARATION_PRIME {
     }
 }
 
-// 14   <assignment> → <identifier> <assignment_operator> <expression>
+// Rule No. 14	<assignment> → <identifier> <assignment_operator> <expression>
 class ASSIGNMENT {
 
     private Symbol identifier;
@@ -256,7 +255,7 @@ class ASSIGNMENT {
     }
 }
 
-// 15   <if_stmt> → <if> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
+// Rule No. 15	<if_stmt> → <if> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
 class IF_STMT {
     private EXPR expr;
     private STMT_LIST stmt_list;
@@ -273,7 +272,7 @@ class IF_STMT {
     }
 }
 
-// 16   <while_stmt> → <while> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
+// Rule No. 16	<while_stmt> → <while> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
 class WHILE_STMT {
     private EXPR expr;
     private STMT_LIST stmt_list;
@@ -290,7 +289,7 @@ class WHILE_STMT {
     }
 }
 
-// 17   <output> → <print> <open_parenthesis> <expression> <close_parenthesis>
+// Rule No. 17	<output> → <print> <open_parenthesis> <expression> <close_parenthesis>
 class OUTPUT {
     private EXPR expr;
 
@@ -303,7 +302,7 @@ class OUTPUT {
     }
 }
 
-// 18   <input> → <input_keyword> <open_parenthesis> <expression> <close_parenthesis>
+// Rule No. 18	<input> → <input_keyword> <open_parenthesis> <expression> <close_parenthesis>
 class INPUT {
     private EXPR expr;
 
@@ -317,7 +316,7 @@ class INPUT {
     }
 }
 
-// 19   <var_list> → <declaration> <identifier_list>
+// Rule No. 19	<var_list> → <declaration> <identifier_list>
 class VAR_LIST {
     private DECLARATION declaration;
     private IDENTIFIER_LIST identifier_list;
@@ -350,7 +349,7 @@ abstract class IDENTIFIER_LIST {
     public abstract void interpret(DATA_TYPE data_type);
 }
 
-// 20   <identifier_list> → <identifier>
+// Rule No. 20	<identifier_list> → <identifier>
 class IDENTIFIER_LIST_1 extends IDENTIFIER_LIST {
     private Symbol identifier;
 
@@ -366,7 +365,7 @@ class IDENTIFIER_LIST_1 extends IDENTIFIER_LIST {
 
 }
 
-// 21   <identifier_list> → <comma> <identifier> <identifier_list>
+// Rule No. 21	<identifier_list> → <comma> <identifier> <identifier_list>
 class IDENTIFIER_LIST_2 extends IDENTIFIER_LIST {
     private Symbol identifier;
     private IDENTIFIER_LIST identifier_list;
@@ -384,7 +383,7 @@ class IDENTIFIER_LIST_2 extends IDENTIFIER_LIST {
     }
 }
 
-// 22   <identifier_list> → ε
+// Rule No. 22	<identifier_list> → ε	<terminator>
 class IDENTIFIER_LIST_3 extends IDENTIFIER_LIST {
     IDENTIFIER_LIST_3() {
     }
@@ -394,7 +393,7 @@ class IDENTIFIER_LIST_3 extends IDENTIFIER_LIST {
     }
 }
 
-// 23   <expression> → <relational_expression> <expression'>
+// Rule No. 23	<expression> → <relational_expression> <expression'>
 class EXPR {
     private RELATIONAL_EXPR relational_expr;
     private EXPR_PRIME expr_prime;
@@ -428,7 +427,7 @@ abstract class EXPR_PRIME {
     public abstract Object interpret(RELATIONAL_EXPR relational_expr);
 }
 
-// 24   <expression'> → <logical_operator> <relational_expression> <expression'>
+// Rule No. 24	<expression'> → <logical_operator> <relational_expression> <expression'>
 class EXPR_PRIME_1 extends EXPR_PRIME {
     private Symbol logical_operator;
     private RELATIONAL_EXPR relational_expr;
@@ -451,7 +450,7 @@ class EXPR_PRIME_1 extends EXPR_PRIME {
     }
 }
 
-// 25   <expression'> → ε
+// Rule No. 25	<expression'> → ε
 class EXPR_PRIME_2 extends EXPR_PRIME {
     EXPR_PRIME_2() {
     }
@@ -462,7 +461,7 @@ class EXPR_PRIME_2 extends EXPR_PRIME {
     }
 }
 
-// 26   <relational_expression> → <relational_operand> <relational_expression'>
+// Rule No. 26	<relational_expression> → <relational_operand> <relational_expression'>
 class RELATIONAL_EXPR {
     private RELATIONAL_OPERAND relational_operand;
     private RELATIONAL_EXPR_PRIME relational_expr_prime;
@@ -496,7 +495,7 @@ abstract class RELATIONAL_EXPR_PRIME {
     public abstract Object interpret(RELATIONAL_OPERAND relational_operand);
 }
 
-// 27   <relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>
+// Rule No. 27	<relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>	<relational_operator>
 class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
     private Symbol relational_operator;
     private RELATIONAL_OPERAND relational_operand;
@@ -528,7 +527,7 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
     }
 }
 
-// 28   <relational_expression'> → ε
+// Rule No. 28	<relational_expression'> → ε
 class RELATIONAL_EXPR_PRIME_2 extends RELATIONAL_EXPR_PRIME {
     RELATIONAL_EXPR_PRIME_2() {
     }
@@ -562,7 +561,7 @@ abstract class RELATIONAL_OPERAND {
     public abstract Object interpret();
 }
 
-// 29   <relational_operand> → <boolean_constant>
+// Rule No. 29	<relational_operand> → <boolean_constant>
 class RELATIONAL_OPERAND_1 extends RELATIONAL_OPERAND {
     private Symbol boolean_constant;
 
@@ -575,7 +574,7 @@ class RELATIONAL_OPERAND_1 extends RELATIONAL_OPERAND {
     }
 }
 
-// 30   <relational_operand> → <math_expression>
+// Rule No. 30	<relational_operand> → <math_expression>
 class RELATIONAL_OPERAND_2 extends RELATIONAL_OPERAND {
     private MATH_EXPRESSION math_expression;
 
@@ -588,7 +587,7 @@ class RELATIONAL_OPERAND_2 extends RELATIONAL_OPERAND {
     }
 }
 
-// 31   <relational_operand> → <integer_constant>
+// Rule No. 31	<relational_operand> → <integer_constant>
 class RELATIONAL_OPERAND_3 extends RELATIONAL_OPERAND {
     private Symbol integer_constant;
 
@@ -601,7 +600,7 @@ class RELATIONAL_OPERAND_3 extends RELATIONAL_OPERAND {
     }
 }
 
-// 32   <relational_operand> → <float_constant>
+// Rule No. 32	<relational_operand> → <integer_constant>
 class RELATIONAL_OPERAND_4 extends RELATIONAL_OPERAND {
     private Symbol float_constant;
 
@@ -614,7 +613,7 @@ class RELATIONAL_OPERAND_4 extends RELATIONAL_OPERAND {
     }
 }
 
-// 33   <relational_operand> → <string_literal>
+// Rule No. 33	<relational_operand> → <string_literal>
 class RELATIONAL_OPERAND_5 extends RELATIONAL_OPERAND {
     private Symbol string_literal;
 
@@ -628,7 +627,7 @@ class RELATIONAL_OPERAND_5 extends RELATIONAL_OPERAND {
     }
 }
 
-// 34   <relational_operand> → <character_constant>
+// Rule No. 34	<relational_operand> → <character_constant>
 class RELATIONAL_OPERAND_6 extends RELATIONAL_OPERAND {
     private Symbol character_constant;
 
@@ -641,11 +640,11 @@ class RELATIONAL_OPERAND_6 extends RELATIONAL_OPERAND {
     }
 }
 
-// 35   <data_type> → <integer>
-// 36   <data_type> → <float>
-// 37   <data_type> → <boolean>
-// 38   <data_type> → <character>
-// 39   <data_type> → <character_string>
+// Rule No. 35	<data_type> → <integer>
+// Rule No. 36	<data_type> → <float>
+// Rule No. 37	<data_type> → <boolean>
+// Rule No. 38	<data_type> → <character>
+// Rule No. 39	<data_type> → <character_string>
 class DATA_TYPE {
     private Symbol type;
 
@@ -658,56 +657,411 @@ class DATA_TYPE {
     }
 }
 
-// 40   <math_expression> → <multiplicative_expression> <math_expression'>
-// 41   <math_expression'> → <additive_operator> <multiplicative_expression> <math_expression'>
-// 42   <math_expression'> → ε
-// 43   <multiplicative_expression> → <term> <multiplicative_expression'>
-// 44   <multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>
-// 45   <multiplicative_expression'> → ε
-
+// Rule No. 40	<math_expression> → <multiplicative_expression> <math_expression'>
+// Rule No. 41	<math_expression'> → <additive_operator> <multiplicative_expression> <math_expression'
+// Rule No. 42	<math_expression'> → ε
+// Rule No. 43	<multiplicative_expression> → <term> <multiplicative_expression'>
+// Rule No. 44	<multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>
+// Rule No. 45	<multiplicative_expression'> → ε
 class MATH_EXPRESSION {
     private LinkedList<Symbol> expression;
-    private java.util.Deque<Integer> operands = new LinkedList();
+    private java.util.Deque<Object> operands = new LinkedList();
 
     MATH_EXPRESSION(Symbol lhs) {
         expression = EXPRESSION.getExpression(lhs);
     }
 
-    int interpret() {
+    Object interpret() {
         LinkedList<Symbol> copy = new LinkedList<>(expression);
-        while (!expression.isEmpty()) {
-            Symbol sym = expression.removeFirst();
-            if (sym.parent.type.equals("<term>")){
-                operands.push((int) Math.floor(Float.parseFloat(TERM.construct(sym).interpret())));
-            }else {
-                int operand2 = operands.pop();
-                int operand1 = operands.pop();
+        while (!copy.isEmpty()) {
+            Symbol sym = copy.removeFirst();
+            if (sym.parent.parent.type.equals("<term>")) {
+                operands.push(TERM.construct(sym.parent).interpret());
+            } else {
+                Object temp2 = operands.pop();
+                Object temp1 = operands.pop();
+                //numerical operations
+                if (temp1 instanceof Integer) {
+                    if (temp2 instanceof Integer) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Integer) temp1 + (Integer) temp2);
+                                break;
 
-                switch (sym.lexeme) {
-                    case "+":
-                        operands.push(operand1 + operand2);
-                        break;
+                            case "-":
+                                operands.push((Integer) temp1 - (Integer) temp2);
+                                break;
 
-                    case "-":
-                        operands.push(operand1 - operand2);
-                        break;
+                            case "*":
+                                operands.push((Integer) temp1 * (Integer) temp2);
+                                break;
 
-                    case "*":
-                        operands.push(operand1 * operand2);
-                        break;
+                            case "/":
+                                operands.push((Integer) temp1 / (Integer) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Integer) temp1 % (Integer) temp2);
+                                break;
+                        }
 
-                    case "/":
-                        operands.push(operand1 / operand2);
-                        break;
+                    } else if (temp2 instanceof Float) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Integer) temp1 + (Float) temp2);
+                                break;
+
+                            case "-":
+                                operands.push((Integer) temp1 - (Float) temp2);
+                                break;
+
+                            case "*":
+                                operands.push((Integer) temp1 * (Float) temp2);
+                                break;
+
+                            case "/":
+                                operands.push((Integer) temp1 / (Float) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Integer) temp1 % (Float) temp2);
+                                break;
+                        }
+                    } else if (temp2 instanceof Character) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Integer) temp1 + (Character) temp2);
+                                break;
+
+                            case "-":
+                                operands.push((Integer) temp1 - (Character) temp2);
+                                break;
+
+                            case "*":
+                                operands.push((Integer) temp1 * (Character) temp2);
+                                break;
+
+                            case "/":
+                                operands.push((Integer) temp1 / (Character) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Integer) temp1 % (Character) temp2);
+                                break;
+                        }
+                    } else if (temp2 instanceof String) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((String) temp2 + temp1);
+                                break;
+
+                            case "*":
+                                String str = "";
+                                for (int i = 0; i < (Integer) temp1; i++) {
+                                    str += (String) temp2;
+                                }
+                                operands.push(str);
+                                break;
+                            default:
+                                operands.push("Invalid arithmetic");
+                        }
+                    } else {
+                        operands.push("Invalid arithmetic");
+                    }
+                } else if (temp1 instanceof Float) {
+                    if (temp2 instanceof Integer) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Float) temp1 + (Integer) temp2);
+                                break;
+
+                            case "-":
+                                operands.push((Float) temp1 - (Integer) temp2);
+                                break;
+
+                            case "*":
+                                operands.push((Float) temp1 * (Integer) temp2);
+                                break;
+
+                            case "/":
+                                operands.push((Float) temp1 / (Integer) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Float) temp1 % (Integer) temp2);
+                                break;
+                        }
+
+                    } else if (temp2 instanceof Float) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Float) temp1 + (Float) temp2);
+                                break;
+
+                            case "-":
+                                operands.push((Float) temp1 - (Float) temp2);
+                                break;
+
+                            case "*":
+                                operands.push((Float) temp1 * (Float) temp2);
+                                break;
+
+                            case "/":
+                                operands.push((Float) temp1 / (Float) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Float) temp1 % (Float) temp2);
+                                break;
+                        }
+                    } else if (temp2 instanceof Character) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Float) temp1 + (Character) temp2);
+                                break;
+
+                            case "-":
+                                operands.push((Float) temp1 - (Character) temp2);
+                                break;
+
+                            case "*":
+                                operands.push((Float) temp1 * (Character) temp2);
+                                break;
+
+                            case "/":
+                                operands.push((Float) temp1 / (Character) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Float) temp1 % (Character) temp2);
+                                break;
+                        }
+                    } else if (temp2 instanceof String) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push(temp1 + (String) temp2);
+                                break;
+                            default:
+                                operands.push("Invalid arithmetic");
+                        }
+                    } else {
+                        operands.push("Invalid arithmetic");
+                    }
+                } else if (temp1 instanceof Character) {
+                    if (temp2 instanceof Integer) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Character) temp1 + (Integer) temp2);
+                                break;
+
+                            case "-":
+                                operands.push((Character) temp1 - (Integer) temp2);
+                                break;
+
+                            case "*":
+                                operands.push((Character) temp1 * (Integer) temp2);
+                                break;
+
+                            case "/":
+                                operands.push((Character) temp1 / (Integer) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Character) temp1 % (Integer) temp2);
+                                break;
+                        }
+
+                    } else if (temp2 instanceof Float) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Character) temp1 + (Float) temp2);
+                                break;
+
+                            case "-":
+                                operands.push((Character) temp1 - (Float) temp2);
+                                break;
+
+                            case "*":
+                                operands.push((Character) temp1 * (Float) temp2);
+                                break;
+
+                            case "/":
+                                operands.push((Character) temp1 / (Float) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Character) temp1 % (Float) temp2);
+                                break;
+                        }
+                    } else if (temp2 instanceof Character) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((Character) temp1 + (Character) temp2);
+                                break;
+
+                            case "-":
+                                operands.push((Character) temp1 - (Character) temp2);
+                                break;
+
+                            case "*":
+                                operands.push((Character) temp1 * (Character) temp2);
+                                break;
+
+                            case "/":
+                                operands.push((Character) temp1 / (Character) temp2);
+                                break;
+                            case "mod":
+                                operands.push((Character) temp1 % (Character) temp2);
+                                break;
+                        }
+                    } else {
+                        ifString(sym, temp2, temp1);
+                    }
+                } else if (temp1 instanceof String) {
+                    if (temp2 instanceof Integer) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((String) temp1 + temp2);
+                                break;
+                            case "*":
+                                String str = "";
+                                for (int i = 0; i < (Integer) temp2; i++) {
+                                    str += (String) temp1;
+                                }
+                                operands.push(str);
+                                break;
+                            default:
+                                operands.push("Invalid Arithmetic");
+                                break;
+                        }
+
+                    } else if (temp2 instanceof Float) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((String) temp1 + temp2);
+                                break;
+                            default:
+                                operands.push("Invalid Arithmetic");
+                                break;
+                        }
+                    } else if (temp2 instanceof Character) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((String) temp1 + temp2);
+                                break;
+                            default:
+                                operands.push("Invalid Arithmetic");
+                                break;
+                        }
+                    } else if (temp2 instanceof Boolean) {
+                        switch (sym.lexeme) {
+                            case "+":
+                                operands.push((String) temp1 + temp2);
+                                break;
+                            default:
+                                operands.push("Invalid Arithmetic");
+                                break;
+                        }
+                    } else ifString(sym, temp2, temp1);
+                } else {
+                    operands.push("Invalid arithmetic");
                 }
             }
         }
-        expression.addAll(copy);
 
         return operands.pop();
     }
+
+    private void ifString(Symbol sym, Object temp2, Object temp1) {
+        if (temp2 instanceof String) {
+            if (sym.lexeme.equals("+")) {
+                operands.push((String) temp2 + temp1);
+            } else {
+                operands.push("Invalid arithmetic");
+            }
+        } else {
+            operands.push("Invalid arithmetic");
+        }
+    }
 }
 
+abstract class CONSTANT {
+    public static CONSTANT construct(Symbol sym) {
+        switch (sym.type) {
+            case "<float_constant>":
+                return new CONSTANT_1(sym);
+            case "<integer_constant>":
+                return new CONSTANT_2(sym);
+            case "<character_constant>":
+                return new CONSTANT_3(sym);
+            case "<string_literal>":
+                return new CONSTANT_4(sym);
+            case "<boolean_constant>":
+                return new CONSTANT_5(sym);
+            default:
+                return null;
+        }
+    }
+
+    public abstract Object interpret();
+}
+
+// Rule No. 46	<constants> → <float_constant>
+class CONSTANT_1 extends CONSTANT {
+    Symbol float_constant;
+
+    public CONSTANT_1(Symbol lhs) {
+        float_constant = lhs.children.get(0);
+    }
+
+    public Float interpret() {
+        return Float.parseFloat(float_constant.lexeme);
+    }
+}
+
+// Rule No. 47	<constants> → <integer_constant>
+class CONSTANT_2 extends CONSTANT {
+    Symbol integer_constant;
+
+    public CONSTANT_2(Symbol lhs) {
+        integer_constant = lhs.children.get(0);
+    }
+
+    public Integer interpret() {
+        return Integer.parseInt(integer_constant.lexeme);
+    }
+}
+
+// Rule No. 48	<constants> → <character_constant>
+class CONSTANT_3 extends CONSTANT {
+    Symbol char_constant;
+
+    public CONSTANT_3(Symbol lhs) {
+        char_constant = lhs.children.get(0);
+    }
+
+    public Character interpret() {
+        return (char_constant.lexeme.substring(1, char_constant.lexeme.length() - 1)).charAt(0);
+    }
+}
+
+// Rule No. 49	<constants> → <string_literal>
+class CONSTANT_4 extends CONSTANT {
+    Symbol string_literal;
+
+    public CONSTANT_4(Symbol lhs) {
+        string_literal = lhs.children.get(0);
+    }
+
+    public String interpret() {
+        return string_literal.lexeme.substring(1, string_literal.lexeme.length() - 1);
+    }
+}
+
+// Rule No. 50	<constants> → <boolean_constant>
+class CONSTANT_5 extends CONSTANT {
+    Symbol boolean_constant;
+
+    public CONSTANT_5(Symbol lhs) {
+        boolean_constant = lhs.children.get(0);
+    }
+
+    public Boolean interpret() {
+        return Boolean.parseBoolean(boolean_constant.lexeme);
+    }
+}
 
 abstract class TERM {
     static String type;
@@ -717,21 +1071,19 @@ abstract class TERM {
         switch (sym.type) {
             case "<identifier>":
                 return new TERM_1(sym);
-            case "<float_constant>":
+            case "<constants>":
                 return new TERM_2(sym);
-            case "<integer_constant>":
-                return new TERM_3(sym);
             case "<input>":
-                return new TERM_4(sym);
+                return new TERM_3(sym);
             default:
                 return null;
         }
     }
 
-    public abstract String interpret();
+    public abstract Object interpret();
 }
 
-// 46   <term> → <identifier>
+// Rule No. 51	<term> → <identifier>
 class TERM_1 extends TERM {
     Symbol identifier;
 
@@ -739,47 +1091,33 @@ class TERM_1 extends TERM {
         identifier = lhs.children.get(0);
     }
 
-    public String interpret() {
+    public Object interpret() {
         return Variable.symbolTable.get(identifier.lexeme).value + "";
     }
 }
 
-// 47   <term> → <float_constant>
-
+// Rule No. 52	<term> → <constants>
 class TERM_2 extends TERM {
-    Symbol float_constant;
+    CONSTANT constant;
 
     public TERM_2(Symbol lhs) {
-        float_constant = lhs.children.get(0);
+        constant = CONSTANT.construct(lhs.children.get(0));
     }
 
-    public String interpret() {
-        return float_constant.lexeme;
+    public Object interpret() {
+        return constant.interpret();
     }
 }
 
-// 48   <term> → <integer_constant>
+// Rule No. 53	<term> → <input>
 class TERM_3 extends TERM {
-    Symbol integer_constant;
-
-    public TERM_3(Symbol lhs) {
-        integer_constant = lhs.children.get(0);
-    }
-
-    public String interpret() {
-        return integer_constant.lexeme;
-    }
-}
-
-// 49   <term> → <input>
-class TERM_4 extends TERM {
     INPUT input;
 
-    public TERM_4(Symbol lhs) {
+    public TERM_3(Symbol lhs) {
         input = new INPUT(lhs);
     }
 
-    public String interpret() {
+    public Object interpret() {
         return input.interpret();
     }
 }

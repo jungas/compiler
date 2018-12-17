@@ -20,4 +20,5 @@
 <math_expression'>	<relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
 <multiplicative_expression>	<additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
 <multiplicative_expression'>	<additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
+<constants>	<multiplicative_operator>, <additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
 <term>	<multiplicative_operator>, <additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>

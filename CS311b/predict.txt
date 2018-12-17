@@ -27,7 +27,7 @@
 27	<relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>	<relational_operator>
 28	<relational_expression'> → ε	<logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
 29	<relational_operand> → <boolean_constant>	<boolean_constant>
-30	<relational_operand> → <math_expression>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+30	<relational_operand> → <math_expression>	<identifier>, <float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>, <input_keyword>
 31	<relational_operand> → <integer_constant>	<integer_constant>
 32	<relational_operand> → <float_constant>	<float_constant>
 33	<relational_operand> → <string_literal>	<string_literal>
@@ -37,13 +37,17 @@
 37	<data_type> → <boolean>	<boolean>
 38	<data_type> → <character>	<character>
 39	<data_type> → <character_string>	<character_string>
-40	<math_expression> → <multiplicative_expression> <math_expression'>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+40	<math_expression> → <multiplicative_expression> <math_expression'>	<identifier>, <float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>, <input_keyword>
 41	<math_expression'> → <additive_operator> <multiplicative_expression> <math_expression'>	<additive_operator>
 42	<math_expression'> → ε	<relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
-43	<multiplicative_expression> → <term> <multiplicative_expression'>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+43	<multiplicative_expression> → <term> <multiplicative_expression'>	<identifier>, <float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>, <input_keyword>
 44	<multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>	<multiplicative_operator>
 45	<multiplicative_expression'> → ε	<additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
-46	<term> → <identifier>	<identifier>
-47	<term> → <float_constant>	<float_constant>
-48	<term> → <integer_constant>	<integer_constant>
-49	<term> → <input>	<input_keyword>
+46	<constants> → <float_constant>	<float_constant>
+47	<constants> → <integer_constant>	<integer_constant>
+48	<constants> → <character_constant>	<character_constant>
+49	<constants> → <string_literal>	<string_literal>
+50	<constants> → <boolean_constant>	<boolean_constant>
+51	<term> → <identifier>	<identifier>
+52	<term> → <constants>	<float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>
+53	<term> → <input>	<input_keyword>

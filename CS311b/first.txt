@@ -44,11 +44,12 @@
 <data_type>	<integer>, <float>, <boolean>, <character>, <character_string>
 <math_expression'>	<additive_operator>, ε
 <multiplicative_expression'>	<multiplicative_operator>, ε
-<term>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+<constants>	<float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>
+<term>	<identifier>, <float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>, <input_keyword>
 <declaration>	<integer>, <float>, <boolean>, <character>, <character_string>
 <var_list>	<integer>, <float>, <boolean>, <character>, <character_string>
-<multiplicative_expression>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
 <stmt>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>
-<math_expression>	<identifier>, <float_constant>, <integer_constant>, <input_keyword>
+<multiplicative_expression>	<identifier>, <float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>, <input_keyword>
+<math_expression>	<identifier>, <float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>, <input_keyword>
 <relational_expression>	<boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <identifier>, <input_keyword>
 <expression>	<boolean_constant>, <integer_constant>, <float_constant>, <string_literal>, <character_constant>, <identifier>, <input_keyword>

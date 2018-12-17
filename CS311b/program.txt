@@ -1,5 +1,8 @@
 program SampleProgram
 begin
-    string x = "ha";
-    print(x);
+    print ("A" * 3);
+    print ("A" + 1.1);
+    print ("A" + 'A');
+    print ("A" + "A");
+    print ("A" + true);
 end
