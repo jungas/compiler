@@ -440,13 +440,13 @@ class EXPR_PRIME_1 extends EXPR_PRIME {
     }
 
     public Object interpret(RELATIONAL_EXPR relational_expr) {
-//        if (logical_operator.lexeme.equals("and")) {
-//            return this.relational_expr.interpret() && relational_expr.interpret();
-//        } else if (logical_operator.lexeme.equals("or")) {
-//            return this.relational_expr.interpret() || relational_expr.interpret();
-//        } else {
-        return expr_prime.interpret(relational_expr);
-//        }
+        if (logical_operator.lexeme.equals("and")) {
+            return (Boolean) this.relational_expr.interpret() && (Boolean) relational_expr.interpret();
+        } else if (logical_operator.lexeme.equals("or")) {
+            return (Boolean) this.relational_expr.interpret() || (Boolean) relational_expr.interpret();
+        } else {
+            return expr_prime.interpret(relational_expr);
+        }
     }
 }
 
@@ -508,22 +508,230 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
     }
 
     public Object interpret(RELATIONAL_OPERAND relational_operand) {
-        switch (relational_operator.lexeme) {
-            case ">":
-                return (Integer) this.relational_operand.interpret() > (Integer) relational_operand.interpret();
-            case "<":
-                return (Integer) this.relational_operand.interpret() < (Integer) relational_operand.interpret();
-            case ">=":
-                return (Integer) this.relational_operand.interpret() >= (Integer) relational_operand.interpret();
-            case "<=":
-                return (Integer) this.relational_operand.interpret() <= (Integer) relational_operand.interpret();
-            case "==":
-                return this.relational_operand.interpret() == relational_operand.interpret();
-            case "!=":
-                return this.relational_operand.interpret() != relational_operand.interpret();
-            default:
-                return relational_expr_prime.interpret(relational_operand);
+        Object temp1, temp2;
+        temp1 = relational_operand.interpret();
+        temp2 = this.relational_operand.interpret();
+        if (temp1 instanceof Integer) {
+            if (temp2 instanceof Integer) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Integer) temp1 > (Integer) temp2;
+                    case "<":
+                        return (Integer) temp1 < (Integer) temp2;
+                    case ">=":
+                        return (Integer) temp1 >= (Integer) temp2;
+                    case "<=":
+                        return (Integer) temp1 <= (Integer) temp2;
+                    case "==":
+                        return temp1.equals(temp2);
+                    case "!=":
+                        return !(temp1.equals(temp2));
+                }
+            } else if (temp2 instanceof Float) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Integer) temp1 > (Float) temp2;
+                    case "<":
+                        return (Integer) temp1 < (Float) temp2;
+                    case ">=":
+                        return (Integer) temp1 >= (Float) temp2;
+                    case "<=":
+                        return (Integer) temp1 <= (Float) temp2;
+                    case "==":
+                        return ((Integer) temp1).intValue() == ((Float) temp2).floatValue();
+                    case "!=":
+                        return ((Integer) temp1).intValue() != ((Float) temp2).floatValue();
+                }
+            } else if (temp2 instanceof Character) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Integer) temp1 > (Character) temp2;
+                    case "<":
+                        return (Integer) temp1 < (Character) temp2;
+                    case ">=":
+                        return (Integer) temp1 >= (Character) temp2;
+                    case "<=":
+                        return (Integer) temp1 <= (Character) temp2;
+                    case "==":
+                        return ((Integer) temp1).intValue() == (Character) temp2;
+                    case "!=":
+                        return ((Integer) temp1).intValue() != (Character) temp2;
+                }
+            } else if (temp2 instanceof String) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Integer) temp1 > ((String) temp2).length();
+                    case "<":
+                        return (Integer) temp1 < ((String) temp2).length();
+                    case ">=":
+                        return (Integer) temp1 >= ((String) temp2).length();
+                    case "<=":
+                        return (Integer) temp1 <= ((String) temp2).length();
+                    case "==":
+                        return (Integer) temp1 == ((String) temp2).length();
+                    case "!=":
+                        return (Integer) temp1 != ((String) temp2).length();
+                }
+            } else {
+                System.out.println("Error");
+                return "";
+            }
+        } else if (temp1 instanceof Float) {
+            if (temp2 instanceof Integer) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Float) temp1 > (Integer) temp2;
+                    case "<":
+                        return (Float) temp1 < (Integer) temp2;
+                    case ">=":
+                        return (Float) temp1 >= (Integer) temp2;
+                    case "<=":
+                        return (Float) temp1 <= (Integer) temp2;
+                    case "==":
+                        return ((Float) temp1).floatValue() == ((Integer) temp2).intValue();
+                    case "!=":
+                        return ((Float) temp1).floatValue() != ((Integer) temp2).intValue();
+                }
+
+            } else if (temp2 instanceof Float) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Float) temp1 > (Float) temp2;
+                    case "<":
+                        return (Float) temp1 < (Float) temp2;
+                    case ">=":
+                        return (Float) temp1 >= (Float) temp2;
+                    case "<=":
+                        return (Float) temp1 <= (Float) temp2;
+                    case "==":
+                        return temp1.equals(temp2);
+                    case "!=":
+                        return !temp1.equals(temp2);
+                }
+            } else if (temp2 instanceof Character) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Float) temp1 > (Character) temp2;
+                    case "<":
+                        return (Float) temp1 < (Character) temp2;
+                    case ">=":
+                        return (Float) temp1 >= (Character) temp2;
+                    case "<=":
+                        return (Float) temp1 <= (Character) temp2;
+                    case "==":
+                        return ((Float) temp1).floatValue() == (Character) temp2;
+                    case "!=":
+                        return ((Float) temp1).floatValue() != (Character) temp2;
+                }
+            } else if (temp2 instanceof String) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Float) temp1 > ((String) temp2).length();
+                    case "<":
+                        return (Float) temp1 < ((String) temp2).length();
+                    case ">=":
+                        return (Float) temp1 >= ((String) temp2).length();
+                    case "<=":
+                        return (Float) temp1 <= ((String) temp2).length();
+                    case "==":
+                        return (Float) temp1 == ((String) temp2).length();
+                    case "!=":
+                        return (Float) temp1 != ((String) temp2).length();
+                }
+            } else {
+                System.out.println("Error");
+                return "";
+            }
+        } else if (temp1 instanceof Character) {
+            if (temp2 instanceof Integer) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Character) temp1 > (Integer) temp2;
+                    case "<":
+                        return (Character) temp1 < (Integer) temp2;
+                    case ">=":
+                        return (Character) temp1 >= (Integer) temp2;
+                    case "<=":
+                        return (Character) temp1 <= (Integer) temp2;
+                    case "==":
+                        return temp1 == temp2;
+                    case "!=":
+                        return temp1 != temp2;
+                }
+            } else if (temp2 instanceof Float) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Character) temp1 > (Float) temp2;
+                    case "<":
+                        return (Character) temp1 < (Float) temp2;
+                    case ">=":
+                        return (Character) temp1 >= (Float) temp2;
+                    case "<=":
+                        return (Character) temp1 <= (Float) temp2;
+                    case "==":
+                        return (Character) temp1 == ((Float) temp2).floatValue();
+                    case "!=":
+                        return (Character) temp1 != ((Float) temp2).floatValue();
+                }
+            } else if (temp2 instanceof Character) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return (Character) temp1 > (Character) temp2;
+                    case "<":
+                        return (Character) temp1 < (Character) temp2;
+                    case ">=":
+                        return (Character) temp1 >= (Character) temp2;
+                    case "<=":
+                        return (Character) temp1 <= (Character) temp2;
+                    case "==":
+                        return temp1 == temp2;
+                    case "!=":
+                        return temp1 != temp2;
+                }
+            } else {
+                System.out.println("Error");
+                return "";
+            }
+        } else if (temp1 instanceof String) {
+            if (temp2 instanceof Integer) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return ((String) temp1).length() > (Integer) temp2;
+                    case "<":
+                        return ((String) temp1).length() < (Integer) temp2;
+                    case ">=":
+                        return ((String) temp1).length() >= (Integer) temp2;
+                    case "<=":
+                        return ((String) temp1).length() <= (Integer) temp2;
+                    case "==":
+                        return ((String) temp1).length() == (Integer) temp2;
+                    case "!=":
+                        return ((String) temp1).length() != (Integer) temp2;
+                }
+
+            } else if (temp2 instanceof Float) {
+                switch (relational_operator.lexeme) {
+                    case ">":
+                        return ((String) temp1).length() > (Float) temp2;
+                    case "<":
+                        return ((String) temp1).length() < (Float) temp2;
+                    case ">=":
+                        return ((String) temp1).length() >= (Float) temp2;
+                    case "<=":
+                        return ((String) temp1).length() <= (Float) temp2;
+                    case "==":
+                        return ((String) temp1).length() == (Float) temp2;
+                    case "!=":
+                        return ((String) temp1).length() != (Float) temp2;
+                }
+            } else {
+                System.out.println("Error");
+                return "";
+            }
+        } else {
+            return "";
         }
+        return "";
     }
 }
 
@@ -677,7 +885,9 @@ class MATH_EXPRESSION {
             Symbol sym = copy.removeFirst();
             if (sym.parent.parent.type.equals("<term>")) {
                 operands.push(TERM.construct(sym.parent).interpret());
-            } else {
+            }else if (sym.parent.type.equals("<term>")){
+                operands.push(TERM.construct(sym).interpret());
+            }else {
                 Object temp2 = operands.pop();
                 Object temp1 = operands.pop();
                 //numerical operations
@@ -1092,7 +1302,7 @@ class TERM_1 extends TERM {
     }
 
     public Object interpret() {
-        return Variable.symbolTable.get(identifier.lexeme).value + "";
+        return Variable.symbolTable.get(identifier.lexeme).value;
     }
 }
 

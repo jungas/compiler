@@ -17,7 +17,7 @@
 <logical_operator> -> and|or
 <additive_operator> -> \+|\-
 <multiplicative_operator> -> \*|/|mod
-<relational_operator> -> <|>|==|!=|<=|=>
+<relational_operator> -> <=|>=|==|!=|<|>
 <assignment_operator> -> =
 <if> -> if
 <while> -> while
