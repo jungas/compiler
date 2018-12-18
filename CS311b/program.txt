@@ -1,9 +1,11 @@
 program SampleProgram
 begin
-    print(1 > true);
-    integer x = 0;
-    while (x != 10){
-        x = x + 1;
-        print(x * "*");
+    integer x = input("Please enter an integer");
+    if(x mod 2 == 0) {
+    	print("The integer is even.");
+    }
+
+    if(x mod 2 != 0) {
+    	print("The integer is odd.");
     }
 end

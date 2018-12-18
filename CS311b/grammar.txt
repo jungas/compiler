@@ -34,5 +34,4 @@
 <multiplicative_expression> -> <term> <multiplicative_expression'>
 <multiplicative_expression'> -> <multiplicative_operator> <term> <multiplicative_expression'>
 <multiplicative_expression'> -> EPSILON
-<constants> -> <float_constant> | <integer_constant> | <character_constant> | <string_literal> | <boolean_constant>
-<term> -> <identifier> | <constants> | <input>
+<term> -> <identifier> | <input> | <float_constant> | <integer_constant> | <character_constant> | <string_literal> | <boolean_constant>

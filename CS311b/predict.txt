@@ -43,11 +43,10 @@
 43	<multiplicative_expression> → <term> <multiplicative_expression'>	<identifier>, <float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>, <input_keyword>
 44	<multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>	<multiplicative_operator>
 45	<multiplicative_expression'> → ε	<additive_operator>, <relational_operator>, <logical_operator>, <close_parenthesis>, <terminator>, <identifier>, <comma>
-46	<constants> → <float_constant>	<float_constant>
-47	<constants> → <integer_constant>	<integer_constant>
-48	<constants> → <character_constant>	<character_constant>
-49	<constants> → <string_literal>	<string_literal>
-50	<constants> → <boolean_constant>	<boolean_constant>
-51	<term> → <identifier>	<identifier>
-52	<term> → <constants>	<float_constant>, <integer_constant>, <character_constant>, <string_literal>, <boolean_constant>
-53	<term> → <input>	<input_keyword>
+46	<term> → <identifier>	<identifier>
+47	<term> → <input>	<input_keyword>
+48	<term> → <float_constant>	<float_constant>
+49	<term> → <integer_constant>	<integer_constant>
+50	<term> → <character_constant>	<character_constant>
+51	<term> → <string_literal>	<string_literal>
+52	<term> → <boolean_constant>	<boolean_constant>

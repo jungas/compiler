@@ -10,7 +10,7 @@ class Interpreter {
     }
 }
 
-// Rule No. 1   <program> → <program_declaration> <program_name> <begin> <stmt_list> <end>
+// 1	<program> → <program_declaration> <program_name> <begin> <stmt_list> <end>
 class PROGRAM {
     private STMT_LIST stmtList;
 
@@ -40,7 +40,7 @@ abstract class STMT_LIST {
     public abstract void interpret();
 }
 
-// Rule No. 2   <stmt_list> → <stmt> <stmt_list>
+// 2	<stmt_list> → <stmt> <stmt_list>
 class STMT_LIST_1 extends STMT_LIST {
     private STMT stmt;
     private STMT_LIST stmt_list;
@@ -56,7 +56,7 @@ class STMT_LIST_1 extends STMT_LIST {
     }
 }
 
-// Rule No. 3   <stmt_list> → <stmt>	<integer>, <float>, <boolean>, <character>, <character_string>, <identifier>, <if>, <print>, <boolean_constant>, <integer_constant>, <integer_constant>, <string_literal>, <character_constant>, <input_keyword>, <while>
+// 3	<stmt_list> → <stmt>
 class STMT_LIST_2 extends STMT_LIST {
     private STMT stmt;
 
@@ -69,7 +69,7 @@ class STMT_LIST_2 extends STMT_LIST {
     }
 }
 
-// Rule No. 4   <stmt_list> → ε	<close_curly_brace>, <end>
+// 4	<stmt_list> → ε
 class STMT_LIST_3 extends STMT_LIST {
     STMT_LIST_3() {
     }
@@ -101,7 +101,7 @@ abstract class STMT {
     abstract void interpret();
 }
 
-// Rule No. 5   <stmt> → <var_list> <terminator>
+// 5	<stmt> → <var_list> <terminator>
 class STMT_1 extends STMT {
     private VAR_LIST var_list;
 
@@ -114,7 +114,7 @@ class STMT_1 extends STMT {
     }
 }
 
-// Rule No. 6   <stmt> → <assignment> <terminator>
+// 6	<stmt> → <assignment> <terminator>
 class STMT_2 extends STMT {
     private ASSIGNMENT assignment;
 
@@ -127,7 +127,7 @@ class STMT_2 extends STMT {
     }
 }
 
-// Rule No. 7   <stmt> → <expression> <terminator>
+// 7	<stmt> → <expression> <terminator>
 class STMT_3 extends STMT {
     private EXPR expr;
 
@@ -140,7 +140,7 @@ class STMT_3 extends STMT {
     }
 }
 
-// Rule No. 8   <stmt> → <if_stmt>
+// 8	<stmt> → <if_stmt>
 class STMT_4 extends STMT {
     private IF_STMT if_stmt;
 
@@ -153,7 +153,7 @@ class STMT_4 extends STMT {
     }
 }
 
-// Rule No. 9   <stmt> → <while_stmt>
+// 9	<stmt> → <while_stmt>
 class STMT_5 extends STMT {
     private WHILE_STMT while_stmt;
 
@@ -166,7 +166,7 @@ class STMT_5 extends STMT {
     }
 }
 
-// Rule No. 10	<stmt> → <output> <terminator>
+// 10	<stmt> → <output> <terminator>
 class STMT_6 extends STMT {
     private OUTPUT output;
 
@@ -179,7 +179,7 @@ class STMT_6 extends STMT {
     }
 }
 
-// Rule No. 11	<declaration> → <data_type> <identifier> <declaration'>
+// 11	<declaration> → <data_type> <identifier> <declaration'>
 class DECLARATION {
     DATA_TYPE data_type;
     private Symbol identifier;
@@ -213,7 +213,7 @@ abstract class DECLARATION_PRIME {
     public abstract Object interpret();
 }
 
-// Rule No. 12	<declaration'> → <assignment_operator> <expression>
+// 12	<declaration'> → <assignment_operator> <expression>
 class DECLARATION_PRIME_1 extends DECLARATION_PRIME {
     private EXPR expr;
 
@@ -226,7 +226,7 @@ class DECLARATION_PRIME_1 extends DECLARATION_PRIME {
     }
 }
 
-// Rule No. 13	<declaration'> → ε
+// 13	<declaration'> → ε
 class DECLARATION_PRIME_2 extends DECLARATION_PRIME {
     DECLARATION_PRIME_2() {
     }
@@ -236,7 +236,7 @@ class DECLARATION_PRIME_2 extends DECLARATION_PRIME {
     }
 }
 
-// Rule No. 14	<assignment> → <identifier> <assignment_operator> <expression>
+// 14	<assignment> → <identifier> <assignment_operator> <expression>
 class ASSIGNMENT {
     private Symbol identifier;
     private EXPR expr;
@@ -253,7 +253,7 @@ class ASSIGNMENT {
     }
 }
 
-// Rule No. 15	<if_stmt> → <if> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
+// 15	<if_stmt> → <if> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
 class IF_STMT {
     private EXPR expr;
     private STMT_LIST stmt_list;
@@ -270,7 +270,7 @@ class IF_STMT {
     }
 }
 
-// Rule No. 16	<while_stmt> → <while> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
+// 16	<while_stmt> → <while> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
 class WHILE_STMT {
     private EXPR expr;
     private STMT_LIST stmt_list;
@@ -287,7 +287,7 @@ class WHILE_STMT {
     }
 }
 
-// Rule No. 17	<output> → <print> <open_parenthesis> <expression> <close_parenthesis>
+// 17	<output> → <print> <open_parenthesis> <expression> <close_parenthesis>
 class OUTPUT {
     private EXPR expr;
 
@@ -300,7 +300,7 @@ class OUTPUT {
     }
 }
 
-// Rule No. 18	<input> → <input_keyword> <open_parenthesis> <expression> <close_parenthesis>
+// 18	<input> → <input_keyword> <open_parenthesis> <expression> <close_parenthesis>
 class INPUT {
     private EXPR expr;
 
@@ -314,7 +314,7 @@ class INPUT {
     }
 }
 
-// Rule No. 19	<var_list> → <declaration> <identifier_list>
+// 19	<var_list> → <declaration> <identifier_list>
 class VAR_LIST {
     private DECLARATION declaration;
     private IDENTIFIER_LIST identifier_list;
@@ -347,7 +347,7 @@ abstract class IDENTIFIER_LIST {
     public abstract void interpret(DATA_TYPE data_type);
 }
 
-// Rule No. 20	<identifier_list> → <identifier>
+// 20	<identifier_list> → <identifier>
 class IDENTIFIER_LIST_1 extends IDENTIFIER_LIST {
     private Symbol identifier;
 
@@ -362,7 +362,7 @@ class IDENTIFIER_LIST_1 extends IDENTIFIER_LIST {
     }
 }
 
-// Rule No. 21	<identifier_list> → <comma> <identifier> <identifier_list>
+// 21	<identifier_list> → <comma> <identifier> <identifier_list>
 class IDENTIFIER_LIST_2 extends IDENTIFIER_LIST {
     private Symbol identifier;
     private IDENTIFIER_LIST identifier_list;
@@ -380,7 +380,7 @@ class IDENTIFIER_LIST_2 extends IDENTIFIER_LIST {
     }
 }
 
-// Rule No. 22	<identifier_list> → ε	<terminator>
+// 22	<identifier_list> → ε	<terminator>
 class IDENTIFIER_LIST_3 extends IDENTIFIER_LIST {
     IDENTIFIER_LIST_3() {
     }
@@ -389,7 +389,7 @@ class IDENTIFIER_LIST_3 extends IDENTIFIER_LIST {
     }
 }
 
-// Rule No. 23	<expression> → <relational_expression> <expression'>
+// 23	<expression> → <relational_expression> <expression'>
 class EXPR {
     private RELATIONAL_EXPR relational_expr;
     private EXPR_PRIME expr_prime;
@@ -423,7 +423,7 @@ abstract class EXPR_PRIME {
     public abstract Object interpret(RELATIONAL_EXPR relational_expr);
 }
 
-// Rule No. 24	<expression'> → <logical_operator> <relational_expression> <expression'>
+// 24	<expression'> → <logical_operator> <relational_expression> <expression'>
 class EXPR_PRIME_1 extends EXPR_PRIME {
     private Symbol logical_operator;
     private RELATIONAL_EXPR relational_expr;
@@ -447,7 +447,7 @@ class EXPR_PRIME_1 extends EXPR_PRIME {
     }
 }
 
-// Rule No. 25	<expression'> → ε
+// 25	<expression'> → ε
 class EXPR_PRIME_2 extends EXPR_PRIME {
     EXPR_PRIME_2() {
     }
@@ -457,7 +457,7 @@ class EXPR_PRIME_2 extends EXPR_PRIME {
     }
 }
 
-// Rule No. 26	<relational_expression> → <relational_operand> <relational_expression'>
+// 26	<relational_expression> → <relational_operand> <relational_expression'>
 class RELATIONAL_EXPR {
     private RELATIONAL_OPERAND relational_operand;
     private RELATIONAL_EXPR_PRIME relational_expr_prime;
@@ -491,7 +491,7 @@ abstract class RELATIONAL_EXPR_PRIME {
     public abstract Object interpret(RELATIONAL_OPERAND relational_operand);
 }
 
-// Rule No. 27	<relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>
+// 27	<relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>
 class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
     private Symbol relational_operator;
     private RELATIONAL_OPERAND relational_operand;
@@ -727,7 +727,7 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
     }
 }
 
-// Rule No. 28	<relational_expression'> → ε
+// 28	<relational_expression'> → ε
 class RELATIONAL_EXPR_PRIME_2 extends RELATIONAL_EXPR_PRIME {
     RELATIONAL_EXPR_PRIME_2() {
     }
@@ -760,7 +760,7 @@ abstract class RELATIONAL_OPERAND {
     public abstract Object interpret();
 }
 
-// Rule No. 29	<relational_operand> → <boolean_constant>
+// 29	<relational_operand> → <boolean_constant>
 class RELATIONAL_OPERAND_1 extends RELATIONAL_OPERAND {
     private Symbol boolean_constant;
 
@@ -773,7 +773,7 @@ class RELATIONAL_OPERAND_1 extends RELATIONAL_OPERAND {
     }
 }
 
-// Rule No. 30	<relational_operand> → <math_expression>
+// 30	<relational_operand> → <math_expression>
 class RELATIONAL_OPERAND_2 extends RELATIONAL_OPERAND {
     private MATH_EXPRESSION math_expression;
 
@@ -786,7 +786,7 @@ class RELATIONAL_OPERAND_2 extends RELATIONAL_OPERAND {
     }
 }
 
-// Rule No. 31	<relational_operand> → <integer_constant>
+// 31	<relational_operand> → <integer_constant>
 class RELATIONAL_OPERAND_3 extends RELATIONAL_OPERAND {
     private Symbol integer_constant;
 
@@ -799,7 +799,7 @@ class RELATIONAL_OPERAND_3 extends RELATIONAL_OPERAND {
     }
 }
 
-// Rule No. 32	<relational_operand> → <integer_constant>
+// 32	<relational_operand> → <integer_constant>
 class RELATIONAL_OPERAND_4 extends RELATIONAL_OPERAND {
     private Symbol float_constant;
 
@@ -812,7 +812,7 @@ class RELATIONAL_OPERAND_4 extends RELATIONAL_OPERAND {
     }
 }
 
-// Rule No. 33	<relational_operand> → <string_literal>
+// 33	<relational_operand> → <string_literal>
 class RELATIONAL_OPERAND_5 extends RELATIONAL_OPERAND {
     private Symbol string_literal;
 
@@ -825,7 +825,7 @@ class RELATIONAL_OPERAND_5 extends RELATIONAL_OPERAND {
     }
 }
 
-// Rule No. 34	<relational_operand> → <character_constant>
+// 34	<relational_operand> → <character_constant>
 class RELATIONAL_OPERAND_6 extends RELATIONAL_OPERAND {
     private Symbol character_constant;
 
@@ -838,11 +838,11 @@ class RELATIONAL_OPERAND_6 extends RELATIONAL_OPERAND {
     }
 }
 
-// Rule No. 35	<data_type> → <integer>
-// Rule No. 36	<data_type> → <float>
-// Rule No. 37	<data_type> → <boolean>
-// Rule No. 38	<data_type> → <character>
-// Rule No. 39	<data_type> → <character_string>
+// 35	<data_type> → <integer>
+// 36	<data_type> → <float>
+// 37	<data_type> → <boolean>
+// 38	<data_type> → <character>
+// 39	<data_type> → <character_string>
 class DATA_TYPE {
     private Symbol type;
 
@@ -855,15 +855,14 @@ class DATA_TYPE {
     }
 }
 
-// Rule No. 40	<math_expression> → <multiplicative_expression> <math_expression'>
-// Rule No. 41	<math_expression'> → <additive_operator> <multiplicative_expression> <math_expression'
-// Rule No. 42	<math_expression'> → ε
-// Rule No. 43	<multiplicative_expression> → <term> <multiplicative_expression'>
-// Rule No. 44	<multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>
-// Rule No. 45	<multiplicative_expression'> → ε
+// 40	<math_expression> → <multiplicative_expression> <math_expression'>
+// 41	<math_expression'> → <additive_operator> <multiplicative_expression> <math_expression'
+// 42	<math_expression'> → ε
+// 43	<multiplicative_expression> → <term> <multiplicative_expression'>
+// 44	<multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>
+// 45	<multiplicative_expression'> → ε
 class MATH_EXPRESSION {
     private LinkedList<Symbol> expression;
-    @SuppressWarnings("unchecked")
     private java.util.Deque<Object> operands = new LinkedList();
 
     MATH_EXPRESSION(Symbol lhs) {
@@ -874,12 +873,11 @@ class MATH_EXPRESSION {
         LinkedList<Symbol> copy = new LinkedList<>(expression);
         while (!copy.isEmpty()) {
             Symbol sym = copy.removeFirst();
-            if (sym.parent.parent.type.equals("<term>")) {
-                //noinspection ConstantConditions
-                operands.push(TERM.construct(sym.parent).interpret());
-            } else if (sym.parent.type.equals("<term>")) {
+            if (sym.parent.type.equals("<term>")) {
                 //noinspection ConstantConditions
                 operands.push(TERM.construct(sym).interpret());
+            } else if (sym.parent.type.equals("<input>")) {
+                return new INPUT(sym.parent).interpret();
             } else {
                 Object temp2 = operands.pop();
                 Object temp1 = operands.pop();
@@ -1146,110 +1144,32 @@ class MATH_EXPRESSION {
     }
 }
 
-abstract class CONSTANT {
-    static CONSTANT construct(Symbol sym) {
-        switch (sym.type) {
-            case "<float_constant>":
-                return new CONSTANT_1(sym);
-            case "<integer_constant>":
-                return new CONSTANT_2(sym);
-            case "<character_constant>":
-                return new CONSTANT_3(sym);
-            case "<string_literal>":
-                return new CONSTANT_4(sym);
-            case "<boolean_constant>":
-                return new CONSTANT_5(sym);
-            default:
-                return null;
-        }
-    }
-
-    public abstract Object interpret();
-}
-
-// Rule No. 46	<constants> → <float_constant>
-class CONSTANT_1 extends CONSTANT {
-    private Symbol float_constant;
-
-    CONSTANT_1(Symbol lhs) {
-        float_constant = lhs.children.get(0);
-    }
-
-    public Float interpret() {
-        return Float.parseFloat(float_constant.lexeme);
-    }
-}
-
-// Rule No. 47	<constants> → <integer_constant>
-class CONSTANT_2 extends CONSTANT {
-    private Symbol integer_constant;
-
-    CONSTANT_2(Symbol lhs) {
-        integer_constant = lhs.children.get(0);
-    }
-
-    public Integer interpret() {
-        return Integer.parseInt(integer_constant.lexeme);
-    }
-}
-
-// Rule No. 48	<constants> → <character_constant>
-class CONSTANT_3 extends CONSTANT {
-    private Symbol char_constant;
-
-    CONSTANT_3(Symbol lhs) {
-        char_constant = lhs.children.get(0);
-    }
-
-    public Character interpret() {
-        return (char_constant.lexeme.substring(1, char_constant.lexeme.length() - 1)).charAt(0);
-    }
-}
-
-// Rule No. 49	<constants> → <string_literal>
-class CONSTANT_4 extends CONSTANT {
-    private Symbol string_literal;
-
-    CONSTANT_4(Symbol lhs) {
-        string_literal = lhs.children.get(0);
-    }
-
-    public String interpret() {
-        return string_literal.lexeme.substring(1, string_literal.lexeme.length() - 1);
-    }
-}
-
-// Rule No. 50	<constants> → <boolean_constant>
-class CONSTANT_5 extends CONSTANT {
-    private Symbol boolean_constant;
-
-    CONSTANT_5(Symbol lhs) {
-        boolean_constant = lhs.children.get(0);
-    }
-
-    public Boolean interpret() {
-        return Boolean.parseBoolean(boolean_constant.lexeme);
-    }
-}
-
 abstract class TERM {
     static TERM construct(Symbol sym) {
         switch (sym.type) {
             case "<identifier>":
                 return new TERM_1(sym);
-            case "<constants>":
-                return new TERM_2(sym);
             case "<input>":
+                return new TERM_2(sym);
+            case "<float_constant>":
                 return new TERM_3(sym);
+            case "<integer_constant>":
+                return new TERM_4(sym);
+            case "<character_constant>":
+                return new TERM_5(sym);
+            case "<string_literal>":
+                return new TERM_6(sym);
+            case "<boolean_constant>":
+                return new TERM_7(sym);
             default:
                 return null;
         }
     }
 
-    public abstract Object interpret();
+    abstract Object interpret();
 }
 
-// Rule No. 51	<term> → <identifier>
+// 46	<term> → <identifier>
 class TERM_1 extends TERM {
     private Symbol identifier;
 
@@ -1257,33 +1177,92 @@ class TERM_1 extends TERM {
         identifier = lhs.children.get(0);
     }
 
-    public Object interpret() {
-        return Variable.symbolTable.get(identifier.lexeme).value;
+    Object interpret() {
+        String value = (String) Variable.symbolTable.get(identifier.lexeme).value;
+        switch (Variable.symbolTable.get(identifier.lexeme).type) {
+            case "integer":return Integer.parseInt(value);
+            case "float": return Float.parseFloat(value);
+            case "character": return value.charAt(0);
+            case "boolean": return Boolean.parseBoolean(value);
+            default: return value;
+        }
     }
 }
 
-// Rule No. 52	<term> → <constants>
+// 47	<term> → <input>
 class TERM_2 extends TERM {
-    private CONSTANT constant;
-
-    TERM_2(Symbol lhs) {
-        constant = CONSTANT.construct(lhs.children.get(0));
-    }
-
-    public Object interpret() {
-        return constant.interpret();
-    }
-}
-
-// Rule No. 53	<term> → <input>
-class TERM_3 extends TERM {
     private INPUT input;
 
-    TERM_3(Symbol lhs) {
-        input = new INPUT(lhs);
+    TERM_2(Symbol lhs) {
+        input = new INPUT(lhs.children.get(0));
     }
 
-    public Object interpret() {
+    Object interpret() {
         return input.interpret();
+    }
+}
+
+// 48	<term> → <float_constant>
+class TERM_3 extends TERM {
+    private Symbol float_constant;
+
+    TERM_3(Symbol lhs) {
+        float_constant = lhs.children.get(0);
+    }
+
+    Float interpret() {
+        return Float.parseFloat(float_constant.lexeme);
+    }
+}
+
+// 49	<term> → <integer_constant>
+class TERM_4 extends TERM {
+    private Symbol integer_constant;
+
+    TERM_4(Symbol lhs) {
+        integer_constant = lhs.children.get(0);
+    }
+
+    Integer interpret() {
+        return Integer.parseInt(integer_constant.lexeme);
+    }
+}
+
+// 50	<term> → <character_constant>
+class TERM_5 extends TERM {
+    private Symbol character_constant;
+
+    TERM_5(Symbol lhs) {
+        character_constant = lhs.children.get(0);
+    }
+
+    Character interpret() {
+        return character_constant.lexeme.charAt(1);
+    }
+}
+
+// 51	<term> → <string_literal>
+class TERM_6 extends TERM {
+    private Symbol string_literal;
+
+    TERM_6(Symbol lhs) {
+        string_literal = lhs.children.get(0);
+    }
+
+    String interpret() {
+        return string_literal.lexeme.substring(1, string_literal.lexeme.length() - 1);
+    }
+}
+
+// 52	<term> → <boolean_constant>
+class TERM_7 extends TERM {
+    private Symbol boolean_constant;
+
+    TERM_7(Symbol lhs) {
+        boolean_constant = lhs.children.get(0);
+    }
+
+    Boolean interpret() {
+        return Boolean.parseBoolean(boolean_constant.lexeme);
     }
 }

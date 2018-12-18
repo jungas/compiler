@@ -3,27 +3,30 @@
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="3" />
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" line="1240" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="93df12b8-3061-46bc-801e-88a9652f9aa0" name="Default Changelist" comment="update relational expression">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/DATA_TYPE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/DATA_TYPE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/DECLARATION.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/DECLARATION.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/INPUT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/INPUT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/Interpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/Interpreter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first.txt" beforeDir="false" afterPath="$PROJECT_DIR$/first.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/follow.txt" beforeDir="false" afterPath="$PROJECT_DIR$/follow.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/grammar.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/ASSIGNMENT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/ASSIGNMENT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IF_STMT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IF_STMT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/MATH_EXPRESSION.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/MATH_EXPRESSION.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/OUTPUT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/OUTPUT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/TERM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/TERM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/VAR_LIST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/VAR_LIST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/WHILE_STMT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/WHILE_STMT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict.txt" beforeDir="false" afterPath="$PROJECT_DIR$/predict.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/program.txt" beforeDir="false" afterPath="$PROJECT_DIR$/program.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" afterDir="false" />
     </list>
@@ -339,20 +342,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="program.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="program.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/program.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="token-lexeme.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/token-lexeme.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -360,20 +354,60 @@
       <file leaf-file-name="CompilerDesign.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="1">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interpreter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Interpreter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="1243" column="20" lean-forward="true" selection-start-line="1243" selection-start-column="20" selection-end-line="1243" selection-end-column="20" />
+            <state relative-caret-position="212">
+              <caret line="1186" column="33" selection-start-line="1186" selection-start-column="33" selection-end-line="1186" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#27504#27534#0" expanded="true" />
+                <element signature="e#2479#2480#0" expanded="true" />
+                <element signature="e#2515#2516#0" expanded="true" />
+                <element signature="e#3247#3248#0" expanded="true" />
+                <element signature="e#3282#3283#0" expanded="true" />
+                <element signature="e#3762#3763#0" expanded="true" />
+                <element signature="e#3796#3797#0" expanded="true" />
+                <element signature="e#7177#7178#0" expanded="true" />
+                <element signature="e#7229#7230#0" expanded="true" />
+                <element signature="e#25003#25004#0" expanded="true" />
+                <element signature="e#25053#25054#0" expanded="true" />
+                <element signature="e#26747#26748#0" expanded="true" />
+                <element signature="e#26781#26782#0" expanded="true" />
+                <element signature="e#27410#27411#0" expanded="true" />
+                <element signature="e#27468#27469#0" expanded="true" />
+                <element signature="e#43541#43542#0" expanded="true" />
+                <element signature="e#43589#43590#0" expanded="true" />
+                <element signature="e#41436#41437#0" expanded="true" />
+                <element signature="e#41490#41491#0" expanded="true" />
+                <element signature="e#41516#41517#0" expanded="true" />
+                <element signature="e#41556#41557#0" expanded="true" />
+                <element signature="e#41672#41673#0" expanded="true" />
+                <element signature="e#41724#41725#0" expanded="true" />
+                <element signature="e#41749#41750#0" expanded="true" />
+                <element signature="e#41811#41812#0" expanded="true" />
+                <element signature="e#41931#41932#0" expanded="true" />
+                <element signature="e#41985#41986#0" expanded="true" />
+                <element signature="e#42012#42013#0" expanded="true" />
+                <element signature="e#42076#42077#0" expanded="true" />
+                <element signature="e#42200#42201#0" expanded="true" />
+                <element signature="e#42256#42257#0" expanded="true" />
+                <element signature="e#42285#42286#0" expanded="true" />
+                <element signature="e#42343#42344#0" expanded="true" />
+                <element signature="e#42459#42460#0" expanded="true" />
+                <element signature="e#42511#42512#0" expanded="true" />
+                <element signature="e#42537#42538#0" expanded="true" />
+                <element signature="e#42630#42631#0" expanded="true" />
+                <element signature="e#42750#42751#0" expanded="true" />
+                <element signature="e#42804#42805#0" expanded="true" />
+                <element signature="e#42932#42933#0" expanded="true" />
+                <element signature="e#43000#43001#0" expanded="true" />
+                <marker date="1545123960971" expanded="true" signature="41260:41599" ph="..." />
               </folding>
             </state>
           </provider>
@@ -390,20 +424,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>var_list</find>
-      <find>print</find>
-      <find>EXPR {</find>
-      <find>var</find>
-      <find>output</find>
-      <find>mathex</find>
-      <find>class expr</find>
-      <find>if (resu</find>
-      <find>class relational_operand</find>
-      <find>expression</find>
       <find>re</find>
       <find>EXPR</find>
       <find>class math</find>
-      <find>class input</find>
       <find>boolean_constant</find>
       <find>while</find>
       <find>class while</find>
@@ -417,9 +440,20 @@
       <find>'A'</find>
       <find>&gt;</find>
       <find>System.</find>
-      <find>substring</find>
       <find>&gt;=</find>
       <find>==</find>
+      <find>expr</find>
+      <find>class RELA</find>
+      <find>class expr</find>
+      <find>assignment</find>
+      <find>input</find>
+      <find>inpu</find>
+      <find>class input</find>
+      <find>class relational</find>
+      <find>class constant</find>
+      <find>substring</find>
+      <find>Variable</find>
+      <find>class data</find>
     </findStrings>
     <replaceStrings>
       <replace>EPSILON</replace>
@@ -460,14 +494,14 @@
         <option value="$PROJECT_DIR$/src/edu/slu/cs311b/MATH_EXPRESSION.java" />
         <option value="$PROJECT_DIR$/Interpreter.java" />
         <option value="$PROJECT_DIR$/MyInterpreter.java" />
-        <option value="$PROJECT_DIR$/grammar.txt" />
-        <option value="$PROJECT_DIR$/follow.txt" />
-        <option value="$PROJECT_DIR$/first.txt" />
-        <option value="$PROJECT_DIR$/predict.txt" />
         <option value="$PROJECT_DIR$/token-lexeme.txt" />
+        <option value="$PROJECT_DIR$/grammar.txt" />
+        <option value="$PROJECT_DIR$/first.txt" />
+        <option value="$PROJECT_DIR$/follow.txt" />
+        <option value="$PROJECT_DIR$/predict.txt" />
         <option value="$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java" />
-        <option value="$PROJECT_DIR$/program.txt" />
         <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" />
+        <option value="$PROJECT_DIR$/program.txt" />
       </list>
     </option>
   </component>
@@ -496,8 +530,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -520,6 +552,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -671,7 +705,8 @@
       <workItem from="1545016253994" duration="8998000" />
       <workItem from="1545043043606" duration="314000" />
       <workItem from="1545046878008" duration="8461000" />
-      <workItem from="1545101054301" duration="370000" />
+      <workItem from="1545101054301" duration="4432000" />
+      <workItem from="1545119097292" duration="5068000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1544960538150</created>
@@ -687,15 +722,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545054376655</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update relational expression">
+      <created>1545103978758</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545103978758</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111005000" />
+    <option name="totallyTimeSpent" value="120135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -707,11 +748,11 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3295302" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5247678" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31888545" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21028744" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21331316" />
       <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -750,8 +791,390 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>267</line>
+          <properties />
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>402</line>
+          <properties />
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>404</line>
+          <properties />
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>470</line>
+          <properties />
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>472</line>
+          <properties />
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>414</line>
+          <properties />
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>416</line>
+          <properties />
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1180</line>
+          <properties />
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1176</line>
+          <properties />
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>261</line>
+          <properties />
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>125</line>
+          <properties />
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>151</line>
+          <properties />
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>164</line>
+          <properties />
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>177</line>
+          <properties />
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>194</line>
+          <properties />
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>195</line>
+          <properties />
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>196</line>
+          <properties />
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>204</line>
+          <properties />
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>206</line>
+          <properties />
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>482</line>
+          <properties />
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>484</line>
+          <properties />
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>499</line>
+          <properties />
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>500</line>
+          <properties />
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>743</line>
+          <properties />
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>745</line>
+          <properties />
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>747</line>
+          <properties />
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>749</line>
+          <properties />
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>751</line>
+          <properties />
+          <option name="timeStamp" value="228" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>753</line>
+          <properties />
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>771</line>
+          <properties />
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>784</line>
+          <properties />
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>797</line>
+          <properties />
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>810</line>
+          <properties />
+          <option name="timeStamp" value="234" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>823</line>
+          <properties />
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>836</line>
+          <properties />
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>853</line>
+          <properties />
+          <option name="timeStamp" value="237" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>872</line>
+          <properties />
+          <option name="timeStamp" value="241" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>873</line>
+          <properties />
+          <option name="timeStamp" value="242" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>874</line>
+          <properties />
+          <option name="timeStamp" value="243" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>868</line>
+          <properties />
+          <option name="timeStamp" value="253" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>877</line>
+          <properties />
+          <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>875</line>
+          <properties />
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1172</line>
+          <properties />
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1150</line>
+          <properties />
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1152</line>
+          <properties />
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1154</line>
+          <properties />
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1156</line>
+          <properties />
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1158</line>
+          <properties />
+          <option name="timeStamp" value="265" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1160</line>
+          <properties />
+          <option name="timeStamp" value="266" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1162</line>
+          <properties />
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>248</line>
+          <properties class="edu.slu.cs311b.ASSIGNMENT" method="interpret">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>871</line>
+          <properties class="edu.slu.cs311b.MATH_EXPRESSION" method="interpret">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="238" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="177" />
+      <option name="time" value="269" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -782,6 +1205,71 @@
     <entry file="file://$PROJECT_DIR$/program.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14943">
+          <caret line="879" column="55" selection-start-line="879" selection-start-column="55" selection-end-line="879" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+            <element signature="e#3247#3248#0" expanded="true" />
+            <element signature="e#3282#3283#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#3796#3797#0" expanded="true" />
+            <element signature="e#7177#7178#0" expanded="true" />
+            <element signature="e#7229#7230#0" expanded="true" />
+            <element signature="e#25003#25004#0" expanded="true" />
+            <element signature="e#25053#25054#0" expanded="true" />
+            <element signature="e#26747#26748#0" expanded="true" />
+            <element signature="e#26781#26782#0" expanded="true" />
+            <element signature="e#27410#27411#0" expanded="true" />
+            <element signature="e#27468#27469#0" expanded="true" />
+            <element signature="e#43541#43542#0" expanded="true" />
+            <element signature="e#43589#43590#0" expanded="true" />
+            <element signature="e#41436#41437#0" expanded="true" />
+            <element signature="e#41490#41491#0" expanded="true" />
+            <element signature="e#41516#41517#0" expanded="true" />
+            <element signature="e#41556#41557#0" expanded="true" />
+            <element signature="e#41672#41673#0" expanded="true" />
+            <element signature="e#41724#41725#0" expanded="true" />
+            <element signature="e#41749#41750#0" expanded="true" />
+            <element signature="e#41811#41812#0" expanded="true" />
+            <element signature="e#41931#41932#0" expanded="true" />
+            <element signature="e#41985#41986#0" expanded="true" />
+            <element signature="e#42012#42013#0" expanded="true" />
+            <element signature="e#42076#42077#0" expanded="true" />
+            <element signature="e#42200#42201#0" expanded="true" />
+            <element signature="e#42256#42257#0" expanded="true" />
+            <element signature="e#42285#42286#0" expanded="true" />
+            <element signature="e#42343#42344#0" expanded="true" />
+            <element signature="e#42459#42460#0" expanded="true" />
+            <element signature="e#42511#42512#0" expanded="true" />
+            <element signature="e#42537#42538#0" expanded="true" />
+            <element signature="e#42630#42631#0" expanded="true" />
+            <element signature="e#42750#42751#0" expanded="true" />
+            <element signature="e#42804#42805#0" expanded="true" />
+            <element signature="e#42932#42933#0" expanded="true" />
+            <element signature="e#43000#43001#0" expanded="true" />
+            <marker date="1545123960971" expanded="true" signature="41260:41599" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/program.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
@@ -806,7 +1294,47 @@
           <caret line="1288" column="1" selection-start-line="1288" selection-start-column="1" selection-end-line="1288" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#27504#27534#0" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+            <element signature="e#3247#3248#0" expanded="true" />
+            <element signature="e#3282#3283#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#3796#3797#0" expanded="true" />
+            <element signature="e#7177#7178#0" expanded="true" />
+            <element signature="e#7229#7230#0" expanded="true" />
+            <element signature="e#25003#25004#0" expanded="true" />
+            <element signature="e#25053#25054#0" expanded="true" />
+            <element signature="e#26747#26748#0" expanded="true" />
+            <element signature="e#26781#26782#0" expanded="true" />
+            <element signature="e#27410#27411#0" expanded="true" />
+            <element signature="e#27468#27469#0" expanded="true" />
+            <element signature="e#43541#43542#0" expanded="true" />
+            <element signature="e#43589#43590#0" expanded="true" />
+            <element signature="e#41436#41437#0" expanded="true" />
+            <element signature="e#41490#41491#0" expanded="true" />
+            <element signature="e#41516#41517#0" expanded="true" />
+            <element signature="e#41556#41557#0" expanded="true" />
+            <element signature="e#41672#41673#0" expanded="true" />
+            <element signature="e#41724#41725#0" expanded="true" />
+            <element signature="e#41749#41750#0" expanded="true" />
+            <element signature="e#41811#41812#0" expanded="true" />
+            <element signature="e#41931#41932#0" expanded="true" />
+            <element signature="e#41985#41986#0" expanded="true" />
+            <element signature="e#42012#42013#0" expanded="true" />
+            <element signature="e#42076#42077#0" expanded="true" />
+            <element signature="e#42200#42201#0" expanded="true" />
+            <element signature="e#42256#42257#0" expanded="true" />
+            <element signature="e#42285#42286#0" expanded="true" />
+            <element signature="e#42343#42344#0" expanded="true" />
+            <element signature="e#42459#42460#0" expanded="true" />
+            <element signature="e#42511#42512#0" expanded="true" />
+            <element signature="e#42537#42538#0" expanded="true" />
+            <element signature="e#42630#42631#0" expanded="true" />
+            <element signature="e#42750#42751#0" expanded="true" />
+            <element signature="e#42804#42805#0" expanded="true" />
+            <element signature="e#42932#42933#0" expanded="true" />
+            <element signature="e#43000#43001#0" expanded="true" />
+            <marker date="1545123960971" expanded="true" signature="41260:41599" ph="..." />
           </folding>
         </state>
       </provider>
@@ -831,7 +1359,47 @@
           <caret line="445" column="61" lean-forward="true" selection-start-line="445" selection-start-column="61" selection-end-line="445" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#27504#27534#0" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+            <element signature="e#3247#3248#0" expanded="true" />
+            <element signature="e#3282#3283#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#3796#3797#0" expanded="true" />
+            <element signature="e#7177#7178#0" expanded="true" />
+            <element signature="e#7229#7230#0" expanded="true" />
+            <element signature="e#25003#25004#0" expanded="true" />
+            <element signature="e#25053#25054#0" expanded="true" />
+            <element signature="e#26747#26748#0" expanded="true" />
+            <element signature="e#26781#26782#0" expanded="true" />
+            <element signature="e#27410#27411#0" expanded="true" />
+            <element signature="e#27468#27469#0" expanded="true" />
+            <element signature="e#43541#43542#0" expanded="true" />
+            <element signature="e#43589#43590#0" expanded="true" />
+            <element signature="e#41436#41437#0" expanded="true" />
+            <element signature="e#41490#41491#0" expanded="true" />
+            <element signature="e#41516#41517#0" expanded="true" />
+            <element signature="e#41556#41557#0" expanded="true" />
+            <element signature="e#41672#41673#0" expanded="true" />
+            <element signature="e#41724#41725#0" expanded="true" />
+            <element signature="e#41749#41750#0" expanded="true" />
+            <element signature="e#41811#41812#0" expanded="true" />
+            <element signature="e#41931#41932#0" expanded="true" />
+            <element signature="e#41985#41986#0" expanded="true" />
+            <element signature="e#42012#42013#0" expanded="true" />
+            <element signature="e#42076#42077#0" expanded="true" />
+            <element signature="e#42200#42201#0" expanded="true" />
+            <element signature="e#42256#42257#0" expanded="true" />
+            <element signature="e#42285#42286#0" expanded="true" />
+            <element signature="e#42343#42344#0" expanded="true" />
+            <element signature="e#42459#42460#0" expanded="true" />
+            <element signature="e#42511#42512#0" expanded="true" />
+            <element signature="e#42537#42538#0" expanded="true" />
+            <element signature="e#42630#42631#0" expanded="true" />
+            <element signature="e#42750#42751#0" expanded="true" />
+            <element signature="e#42804#42805#0" expanded="true" />
+            <element signature="e#42932#42933#0" expanded="true" />
+            <element signature="e#43000#43001#0" expanded="true" />
+            <marker date="1545123960971" expanded="true" signature="41260:41599" ph="..." />
           </folding>
         </state>
       </provider>
@@ -856,7 +1424,47 @@
           <caret line="947" column="55" selection-start-line="947" selection-start-column="55" selection-end-line="947" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#27504#27534#0" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+            <element signature="e#3247#3248#0" expanded="true" />
+            <element signature="e#3282#3283#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#3796#3797#0" expanded="true" />
+            <element signature="e#7177#7178#0" expanded="true" />
+            <element signature="e#7229#7230#0" expanded="true" />
+            <element signature="e#25003#25004#0" expanded="true" />
+            <element signature="e#25053#25054#0" expanded="true" />
+            <element signature="e#26747#26748#0" expanded="true" />
+            <element signature="e#26781#26782#0" expanded="true" />
+            <element signature="e#27410#27411#0" expanded="true" />
+            <element signature="e#27468#27469#0" expanded="true" />
+            <element signature="e#43541#43542#0" expanded="true" />
+            <element signature="e#43589#43590#0" expanded="true" />
+            <element signature="e#41436#41437#0" expanded="true" />
+            <element signature="e#41490#41491#0" expanded="true" />
+            <element signature="e#41516#41517#0" expanded="true" />
+            <element signature="e#41556#41557#0" expanded="true" />
+            <element signature="e#41672#41673#0" expanded="true" />
+            <element signature="e#41724#41725#0" expanded="true" />
+            <element signature="e#41749#41750#0" expanded="true" />
+            <element signature="e#41811#41812#0" expanded="true" />
+            <element signature="e#41931#41932#0" expanded="true" />
+            <element signature="e#41985#41986#0" expanded="true" />
+            <element signature="e#42012#42013#0" expanded="true" />
+            <element signature="e#42076#42077#0" expanded="true" />
+            <element signature="e#42200#42201#0" expanded="true" />
+            <element signature="e#42256#42257#0" expanded="true" />
+            <element signature="e#42285#42286#0" expanded="true" />
+            <element signature="e#42343#42344#0" expanded="true" />
+            <element signature="e#42459#42460#0" expanded="true" />
+            <element signature="e#42511#42512#0" expanded="true" />
+            <element signature="e#42537#42538#0" expanded="true" />
+            <element signature="e#42630#42631#0" expanded="true" />
+            <element signature="e#42750#42751#0" expanded="true" />
+            <element signature="e#42804#42805#0" expanded="true" />
+            <element signature="e#42932#42933#0" expanded="true" />
+            <element signature="e#43000#43001#0" expanded="true" />
+            <marker date="1545123960971" expanded="true" signature="41260:41599" ph="..." />
           </folding>
         </state>
       </provider>
@@ -906,13 +1514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/EXPRESSION.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyInterpreter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -930,63 +1531,110 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Number.java" />
-    <entry file="file://$PROJECT_DIR$/first.txt">
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/EXPRESSION.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="115">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token-lexeme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/follow.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="23" column="155" selection-start-line="23" selection-start-column="155" selection-end-line="23" selection-end-column="155" />
+          <caret line="22" column="155" selection-start-line="22" selection-start-column="155" selection-end-line="22" selection-end-column="155" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/predict.txt">
+    <entry file="file://$PROJECT_DIR$/first.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+        <state relative-caret-position="519">
+          <caret line="53" column="143" selection-start-line="53" selection-start-column="143" selection-end-line="53" selection-end-column="143" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grammar.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java">
+    <entry file="file://$PROJECT_DIR$/predict.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/token-lexeme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/program.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="279">
+          <caret line="17" column="28" selection-start-line="16" selection-end-line="17" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="1243" column="20" lean-forward="true" selection-start-line="1243" selection-start-column="20" selection-end-line="1243" selection-end-column="20" />
+        <state relative-caret-position="212">
+          <caret line="1186" column="33" selection-start-line="1186" selection-start-column="33" selection-end-line="1186" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#27504#27534#0" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+            <element signature="e#3247#3248#0" expanded="true" />
+            <element signature="e#3282#3283#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#3796#3797#0" expanded="true" />
+            <element signature="e#7177#7178#0" expanded="true" />
+            <element signature="e#7229#7230#0" expanded="true" />
+            <element signature="e#25003#25004#0" expanded="true" />
+            <element signature="e#25053#25054#0" expanded="true" />
+            <element signature="e#26747#26748#0" expanded="true" />
+            <element signature="e#26781#26782#0" expanded="true" />
+            <element signature="e#27410#27411#0" expanded="true" />
+            <element signature="e#27468#27469#0" expanded="true" />
+            <element signature="e#43541#43542#0" expanded="true" />
+            <element signature="e#43589#43590#0" expanded="true" />
+            <element signature="e#41436#41437#0" expanded="true" />
+            <element signature="e#41490#41491#0" expanded="true" />
+            <element signature="e#41516#41517#0" expanded="true" />
+            <element signature="e#41556#41557#0" expanded="true" />
+            <element signature="e#41672#41673#0" expanded="true" />
+            <element signature="e#41724#41725#0" expanded="true" />
+            <element signature="e#41749#41750#0" expanded="true" />
+            <element signature="e#41811#41812#0" expanded="true" />
+            <element signature="e#41931#41932#0" expanded="true" />
+            <element signature="e#41985#41986#0" expanded="true" />
+            <element signature="e#42012#42013#0" expanded="true" />
+            <element signature="e#42076#42077#0" expanded="true" />
+            <element signature="e#42200#42201#0" expanded="true" />
+            <element signature="e#42256#42257#0" expanded="true" />
+            <element signature="e#42285#42286#0" expanded="true" />
+            <element signature="e#42343#42344#0" expanded="true" />
+            <element signature="e#42459#42460#0" expanded="true" />
+            <element signature="e#42511#42512#0" expanded="true" />
+            <element signature="e#42537#42538#0" expanded="true" />
+            <element signature="e#42630#42631#0" expanded="true" />
+            <element signature="e#42750#42751#0" expanded="true" />
+            <element signature="e#42804#42805#0" expanded="true" />
+            <element signature="e#42932#42933#0" expanded="true" />
+            <element signature="e#43000#43001#0" expanded="true" />
+            <marker date="1545123960971" expanded="true" signature="41260:41599" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/program.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
