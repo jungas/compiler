@@ -1,5 +1,6 @@
 program SampleProgram
 begin
+    print(1 > true);
     integer x = 0;
     while (x != 10){
         x = x + 1;

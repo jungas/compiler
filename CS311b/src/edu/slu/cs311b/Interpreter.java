@@ -3,8 +3,8 @@ package edu.slu.cs311b;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Interpreter {
-    public static void interpret(Symbol root) {
+class Interpreter {
+    static void interpret(Symbol root) {
         PROGRAM p = new PROGRAM(root);
         p.interpret();
     }
@@ -185,13 +185,13 @@ class DECLARATION {
     private Symbol identifier;
     private DECLARATION_PRIME declaration_prime;
 
-    public DECLARATION(Symbol lhs) {
+    DECLARATION(Symbol lhs) {
         data_type = new DATA_TYPE(lhs.children.get(0));
         identifier = lhs.children.get(1);
         declaration_prime = DECLARATION_PRIME.construct(lhs.children.get(2));
     }
 
-    public void interpret() {
+    void interpret() {
         Variable v = new Variable(identifier.lexeme, data_type.interpret(), 0);
         v.value = declaration_prime.interpret();
         System.out.println("\t" + Variable.symbolTable);
@@ -238,7 +238,6 @@ class DECLARATION_PRIME_2 extends DECLARATION_PRIME {
 
 // Rule No. 14	<assignment> → <identifier> <assignment_operator> <expression>
 class ASSIGNMENT {
-
     private Symbol identifier;
     private EXPR expr;
 
@@ -250,7 +249,6 @@ class ASSIGNMENT {
     void interpret() {
         Variable var = Variable.symbolTable.get(identifier.lexeme);
         var.value = expr.interpret();
-
         System.out.println("\tAssigned " + var.name + " = " + var.value);
     }
 }
@@ -306,11 +304,11 @@ class OUTPUT {
 class INPUT {
     private EXPR expr;
 
-    public INPUT(Symbol lhs) {
+    INPUT(Symbol lhs) {
         expr = new EXPR(lhs.children.get(2));
     }
 
-    public String interpret() {
+    String interpret() {
         System.out.println(expr.interpret());
         return new Scanner(System.in).nextLine();
     }
@@ -362,7 +360,6 @@ class IDENTIFIER_LIST_1 extends IDENTIFIER_LIST {
         v.value = null;
         System.out.println("\t" + Variable.symbolTable);
     }
-
 }
 
 // Rule No. 21	<identifier_list> → <comma> <identifier> <identifier_list>
@@ -388,7 +385,6 @@ class IDENTIFIER_LIST_3 extends IDENTIFIER_LIST {
     IDENTIFIER_LIST_3() {
     }
 
-    @Override
     public void interpret(DATA_TYPE data_type) {
     }
 }
@@ -440,12 +436,13 @@ class EXPR_PRIME_1 extends EXPR_PRIME {
     }
 
     public Object interpret(RELATIONAL_EXPR relational_expr) {
-        if (logical_operator.lexeme.equals("and")) {
-            return (Boolean) this.relational_expr.interpret() && (Boolean) relational_expr.interpret();
-        } else if (logical_operator.lexeme.equals("or")) {
-            return (Boolean) this.relational_expr.interpret() || (Boolean) relational_expr.interpret();
-        } else {
-            return expr_prime.interpret(relational_expr);
+        switch (logical_operator.lexeme) {
+            case "and":
+                return (Boolean) this.relational_expr.interpret() && (Boolean) relational_expr.interpret();
+            case "or":
+                return (Boolean) this.relational_expr.interpret() || (Boolean) relational_expr.interpret();
+            default:
+                return expr_prime.interpret(relational_expr);
         }
     }
 }
@@ -455,7 +452,6 @@ class EXPR_PRIME_2 extends EXPR_PRIME {
     EXPR_PRIME_2() {
     }
 
-    @Override
     public Object interpret(RELATIONAL_EXPR relational_expr) {
         return null;
     }
@@ -495,16 +491,14 @@ abstract class RELATIONAL_EXPR_PRIME {
     public abstract Object interpret(RELATIONAL_OPERAND relational_operand);
 }
 
-// Rule No. 27	<relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>	<relational_operator>
+// Rule No. 27	<relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>
 class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
     private Symbol relational_operator;
     private RELATIONAL_OPERAND relational_operand;
-    private RELATIONAL_EXPR_PRIME relational_expr_prime;
 
     RELATIONAL_EXPR_PRIME_1(Symbol lhs) {
         relational_operator = lhs.children.get(0);
         relational_operand = RELATIONAL_OPERAND.construct(lhs.children.get(1));
-        relational_expr_prime = RELATIONAL_EXPR_PRIME.construct(lhs.children.get(2));
     }
 
     public Object interpret(RELATIONAL_OPERAND relational_operand) {
@@ -592,7 +586,6 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                     case "!=":
                         return ((Float) temp1).floatValue() != ((Integer) temp2).intValue();
                 }
-
             } else if (temp2 instanceof Float) {
                 switch (relational_operator.lexeme) {
                     case ">":
@@ -708,7 +701,6 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                     case "!=":
                         return ((String) temp1).length() != (Integer) temp2;
                 }
-
             } else if (temp2 instanceof Float) {
                 switch (relational_operator.lexeme) {
                     case ">":
@@ -740,7 +732,6 @@ class RELATIONAL_EXPR_PRIME_2 extends RELATIONAL_EXPR_PRIME {
     RELATIONAL_EXPR_PRIME_2() {
     }
 
-    @Override
     public Object interpret(RELATIONAL_OPERAND relational_operand) {
         return null;
     }
@@ -826,7 +817,6 @@ class RELATIONAL_OPERAND_5 extends RELATIONAL_OPERAND {
     private Symbol string_literal;
 
     RELATIONAL_OPERAND_5(Symbol lhs) {
-
         string_literal = lhs.children.get(0);
     }
 
@@ -873,6 +863,7 @@ class DATA_TYPE {
 // Rule No. 45	<multiplicative_expression'> → ε
 class MATH_EXPRESSION {
     private LinkedList<Symbol> expression;
+    @SuppressWarnings("unchecked")
     private java.util.Deque<Object> operands = new LinkedList();
 
     MATH_EXPRESSION(Symbol lhs) {
@@ -884,28 +875,26 @@ class MATH_EXPRESSION {
         while (!copy.isEmpty()) {
             Symbol sym = copy.removeFirst();
             if (sym.parent.parent.type.equals("<term>")) {
+                //noinspection ConstantConditions
                 operands.push(TERM.construct(sym.parent).interpret());
-            }else if (sym.parent.type.equals("<term>")){
+            } else if (sym.parent.type.equals("<term>")) {
+                //noinspection ConstantConditions
                 operands.push(TERM.construct(sym).interpret());
-            }else {
+            } else {
                 Object temp2 = operands.pop();
                 Object temp1 = operands.pop();
-                //numerical operations
                 if (temp1 instanceof Integer) {
                     if (temp2 instanceof Integer) {
                         switch (sym.lexeme) {
                             case "+":
                                 operands.push((Integer) temp1 + (Integer) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Integer) temp1 - (Integer) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Integer) temp1 * (Integer) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Integer) temp1 / (Integer) temp2);
                                 break;
@@ -913,21 +902,17 @@ class MATH_EXPRESSION {
                                 operands.push((Integer) temp1 % (Integer) temp2);
                                 break;
                         }
-
                     } else if (temp2 instanceof Float) {
                         switch (sym.lexeme) {
                             case "+":
                                 operands.push((Integer) temp1 + (Float) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Integer) temp1 - (Float) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Integer) temp1 * (Float) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Integer) temp1 / (Float) temp2);
                                 break;
@@ -940,15 +925,12 @@ class MATH_EXPRESSION {
                             case "+":
                                 operands.push((Integer) temp1 + (Character) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Integer) temp1 - (Character) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Integer) temp1 * (Character) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Integer) temp1 / (Character) temp2);
                                 break;
@@ -961,13 +943,12 @@ class MATH_EXPRESSION {
                             case "+":
                                 operands.push((String) temp2 + temp1);
                                 break;
-
                             case "*":
-                                String str = "";
+                                StringBuilder str = new StringBuilder();
                                 for (int i = 0; i < (Integer) temp1; i++) {
-                                    str += (String) temp2;
+                                    str.append((String) temp2);
                                 }
-                                operands.push(str);
+                                operands.push(str.toString());
                                 break;
                             default:
                                 operands.push("Invalid arithmetic");
@@ -981,15 +962,12 @@ class MATH_EXPRESSION {
                             case "+":
                                 operands.push((Float) temp1 + (Integer) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Float) temp1 - (Integer) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Float) temp1 * (Integer) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Float) temp1 / (Integer) temp2);
                                 break;
@@ -997,21 +975,17 @@ class MATH_EXPRESSION {
                                 operands.push((Float) temp1 % (Integer) temp2);
                                 break;
                         }
-
                     } else if (temp2 instanceof Float) {
                         switch (sym.lexeme) {
                             case "+":
                                 operands.push((Float) temp1 + (Float) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Float) temp1 - (Float) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Float) temp1 * (Float) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Float) temp1 / (Float) temp2);
                                 break;
@@ -1024,15 +998,12 @@ class MATH_EXPRESSION {
                             case "+":
                                 operands.push((Float) temp1 + (Character) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Float) temp1 - (Character) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Float) temp1 * (Character) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Float) temp1 / (Character) temp2);
                                 break;
@@ -1057,15 +1028,12 @@ class MATH_EXPRESSION {
                             case "+":
                                 operands.push((Character) temp1 + (Integer) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Character) temp1 - (Integer) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Character) temp1 * (Integer) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Character) temp1 / (Integer) temp2);
                                 break;
@@ -1073,21 +1041,17 @@ class MATH_EXPRESSION {
                                 operands.push((Character) temp1 % (Integer) temp2);
                                 break;
                         }
-
                     } else if (temp2 instanceof Float) {
                         switch (sym.lexeme) {
                             case "+":
                                 operands.push((Character) temp1 + (Float) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Character) temp1 - (Float) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Character) temp1 * (Float) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Character) temp1 / (Float) temp2);
                                 break;
@@ -1100,15 +1064,12 @@ class MATH_EXPRESSION {
                             case "+":
                                 operands.push((Character) temp1 + (Character) temp2);
                                 break;
-
                             case "-":
                                 operands.push((Character) temp1 - (Character) temp2);
                                 break;
-
                             case "*":
                                 operands.push((Character) temp1 * (Character) temp2);
                                 break;
-
                             case "/":
                                 operands.push((Character) temp1 / (Character) temp2);
                                 break;
@@ -1126,17 +1087,16 @@ class MATH_EXPRESSION {
                                 operands.push((String) temp1 + temp2);
                                 break;
                             case "*":
-                                String str = "";
+                                StringBuilder str = new StringBuilder();
                                 for (int i = 0; i < (Integer) temp2; i++) {
-                                    str += (String) temp1;
+                                    str.append((String) temp1);
                                 }
-                                operands.push(str);
+                                operands.push(str.toString());
                                 break;
                             default:
                                 operands.push("Invalid Arithmetic");
                                 break;
                         }
-
                     } else if (temp2 instanceof Float) {
                         switch (sym.lexeme) {
                             case "+":
@@ -1170,7 +1130,6 @@ class MATH_EXPRESSION {
                 }
             }
         }
-
         return operands.pop();
     }
 
@@ -1188,7 +1147,7 @@ class MATH_EXPRESSION {
 }
 
 abstract class CONSTANT {
-    public static CONSTANT construct(Symbol sym) {
+    static CONSTANT construct(Symbol sym) {
         switch (sym.type) {
             case "<float_constant>":
                 return new CONSTANT_1(sym);
@@ -1210,9 +1169,9 @@ abstract class CONSTANT {
 
 // Rule No. 46	<constants> → <float_constant>
 class CONSTANT_1 extends CONSTANT {
-    Symbol float_constant;
+    private Symbol float_constant;
 
-    public CONSTANT_1(Symbol lhs) {
+    CONSTANT_1(Symbol lhs) {
         float_constant = lhs.children.get(0);
     }
 
@@ -1223,9 +1182,9 @@ class CONSTANT_1 extends CONSTANT {
 
 // Rule No. 47	<constants> → <integer_constant>
 class CONSTANT_2 extends CONSTANT {
-    Symbol integer_constant;
+    private Symbol integer_constant;
 
-    public CONSTANT_2(Symbol lhs) {
+    CONSTANT_2(Symbol lhs) {
         integer_constant = lhs.children.get(0);
     }
 
@@ -1236,9 +1195,9 @@ class CONSTANT_2 extends CONSTANT {
 
 // Rule No. 48	<constants> → <character_constant>
 class CONSTANT_3 extends CONSTANT {
-    Symbol char_constant;
+    private Symbol char_constant;
 
-    public CONSTANT_3(Symbol lhs) {
+    CONSTANT_3(Symbol lhs) {
         char_constant = lhs.children.get(0);
     }
 
@@ -1249,9 +1208,9 @@ class CONSTANT_3 extends CONSTANT {
 
 // Rule No. 49	<constants> → <string_literal>
 class CONSTANT_4 extends CONSTANT {
-    Symbol string_literal;
+    private Symbol string_literal;
 
-    public CONSTANT_4(Symbol lhs) {
+    CONSTANT_4(Symbol lhs) {
         string_literal = lhs.children.get(0);
     }
 
@@ -1262,9 +1221,9 @@ class CONSTANT_4 extends CONSTANT {
 
 // Rule No. 50	<constants> → <boolean_constant>
 class CONSTANT_5 extends CONSTANT {
-    Symbol boolean_constant;
+    private Symbol boolean_constant;
 
-    public CONSTANT_5(Symbol lhs) {
+    CONSTANT_5(Symbol lhs) {
         boolean_constant = lhs.children.get(0);
     }
 
@@ -1274,10 +1233,7 @@ class CONSTANT_5 extends CONSTANT {
 }
 
 abstract class TERM {
-    static String type;
-
-    public static TERM construct(Symbol sym) {
-        type = sym.type;
+    static TERM construct(Symbol sym) {
         switch (sym.type) {
             case "<identifier>":
                 return new TERM_1(sym);
@@ -1295,9 +1251,9 @@ abstract class TERM {
 
 // Rule No. 51	<term> → <identifier>
 class TERM_1 extends TERM {
-    Symbol identifier;
+    private Symbol identifier;
 
-    public TERM_1(Symbol lhs) {
+    TERM_1(Symbol lhs) {
         identifier = lhs.children.get(0);
     }
 
@@ -1308,9 +1264,9 @@ class TERM_1 extends TERM {
 
 // Rule No. 52	<term> → <constants>
 class TERM_2 extends TERM {
-    CONSTANT constant;
+    private CONSTANT constant;
 
-    public TERM_2(Symbol lhs) {
+    TERM_2(Symbol lhs) {
         constant = CONSTANT.construct(lhs.children.get(0));
     }
 
@@ -1321,9 +1277,9 @@ class TERM_2 extends TERM {
 
 // Rule No. 53	<term> → <input>
 class TERM_3 extends TERM {
-    INPUT input;
+    private INPUT input;
 
-    public TERM_3(Symbol lhs) {
+    TERM_3(Symbol lhs) {
         input = new INPUT(lhs);
     }
 
@@ -1331,4 +1287,3 @@ class TERM_3 extends TERM {
         return input.interpret();
     }
 }
-
