@@ -40,23 +40,23 @@ abstract class STMT_LIST {
     public abstract void interpret();
 }
 
-// 2	<stmt_list> → <stmt> <stmt_list>
+// 2	<stmtList> → <stmt> <stmt_list>
 class STMT_LIST_1 extends STMT_LIST {
     private STMT stmt;
-    private STMT_LIST stmt_list;
+    private STMT_LIST stmtList;
 
     STMT_LIST_1(Symbol lhs) {
         stmt = STMT.construct(lhs.children.get(0));
-        stmt_list = STMT_LIST.construct(lhs.children.get(1));
+        stmtList = STMT_LIST.construct(lhs.children.get(1));
     }
 
     public void interpret() {
         stmt.interpret();
-        stmt_list.interpret();
+        stmtList.interpret();
     }
 }
 
-// 3	<stmt_list> → <stmt>
+// 3	<stmtList> → <stmt>
 class STMT_LIST_2 extends STMT_LIST {
     private STMT stmt;
 
@@ -69,7 +69,7 @@ class STMT_LIST_2 extends STMT_LIST {
     }
 }
 
-// 4	<stmt_list> → ε
+// 4	<stmtList> → ε
 class STMT_LIST_3 extends STMT_LIST {
     STMT_LIST_3() {
     }
@@ -103,14 +103,14 @@ abstract class STMT {
 
 // 5	<stmt> → <var_list> <terminator>
 class STMT_1 extends STMT {
-    private VAR_LIST var_list;
+    private VAR_LIST varList;
 
     STMT_1(Symbol lhs) {
-        var_list = new VAR_LIST(lhs.children.get(0));
+        varList = new VAR_LIST(lhs.children.get(0));
     }
 
     public void interpret() {
-        var_list.interpret();
+        varList.interpret();
     }
 }
 
@@ -142,27 +142,27 @@ class STMT_3 extends STMT {
 
 // 8	<stmt> → <if_stmt>
 class STMT_4 extends STMT {
-    private IF_STMT if_stmt;
+    private IF_STMT ifStmt;
 
     STMT_4(Symbol lhs) {
-        if_stmt = new IF_STMT(lhs.children.get(0));
+        ifStmt = new IF_STMT(lhs.children.get(0));
     }
 
     public void interpret() {
-        if_stmt.interpret();
+        ifStmt.interpret();
     }
 }
 
 // 9	<stmt> → <while_stmt>
 class STMT_5 extends STMT {
-    private WHILE_STMT while_stmt;
+    private WHILE_STMT whileStmt;
 
     STMT_5(Symbol lhs) {
-        while_stmt = new WHILE_STMT(lhs.children.get(0));
+        whileStmt = new WHILE_STMT(lhs.children.get(0));
     }
 
     public void interpret() {
-        while_stmt.interpret();
+        whileStmt.interpret();
     }
 }
 
@@ -179,21 +179,21 @@ class STMT_6 extends STMT {
     }
 }
 
-// 11	<declaration> → <data_type> <identifier> <declaration'>
+// 11	<declaration> → <dataType> <identifier> <declaration'>
 class DECLARATION {
-    DATA_TYPE data_type;
+    DATA_TYPE dataType;
     private Symbol identifier;
-    private DECLARATION_PRIME declaration_prime;
+    private DECLARATION_PRIME declarationPrime;
 
     DECLARATION(Symbol lhs) {
-        data_type = new DATA_TYPE(lhs.children.get(0));
+        dataType = new DATA_TYPE(lhs.children.get(0));
         identifier = lhs.children.get(1);
-        declaration_prime = DECLARATION_PRIME.construct(lhs.children.get(2));
+        declarationPrime = DECLARATION_PRIME.construct(lhs.children.get(2));
     }
 
     void interpret() {
-        Variable v = new Variable(identifier.lexeme, data_type.interpret(), 0);
-        v.value = declaration_prime.interpret();
+        Variable v = new Variable(identifier.lexeme, dataType.interpret(), 0);
+        v.value = declarationPrime.interpret();
         System.out.println("\t" + Variable.symbolTable);
     }
 }
@@ -253,36 +253,36 @@ class ASSIGNMENT {
     }
 }
 
-// 15	<if_stmt> → <if> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
+// 15	<ifStmt> → <if> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
 class IF_STMT {
     private EXPR expr;
-    private STMT_LIST stmt_list;
+    private STMT_LIST stmtList;
 
     IF_STMT(Symbol lhs) {
         expr = new EXPR(lhs.children.get(2));
-        stmt_list = STMT_LIST.construct(lhs.children.get(5));
+        stmtList = STMT_LIST.construct(lhs.children.get(5));
     }
 
     void interpret() {
         if ((boolean) expr.interpret()) {
-            stmt_list.interpret();
+            stmtList.interpret();
         }
     }
 }
 
-// 16	<while_stmt> → <while> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
+// 16	<whileStmt> → <while> <open_parenthesis> <expression> <close_parenthesis> <open_curly_brace> <stmt_list> <close_curly_brace>
 class WHILE_STMT {
     private EXPR expr;
-    private STMT_LIST stmt_list;
+    private STMT_LIST stmtList;
 
     WHILE_STMT(Symbol lhs) {
         expr = new EXPR(lhs.children.get(2));
-        stmt_list = STMT_LIST.construct(lhs.children.get(5));
+        stmtList = STMT_LIST.construct(lhs.children.get(5));
     }
 
     void interpret() {
         while ((boolean) expr.interpret()) {
-            stmt_list.interpret();
+            stmtList.interpret();
         }
     }
 }
@@ -314,19 +314,19 @@ class INPUT {
     }
 }
 
-// 19	<var_list> → <declaration> <identifier_list>
+// 19	<varList> → <declaration> <identifier_list>
 class VAR_LIST {
     private DECLARATION declaration;
-    private IDENTIFIER_LIST identifier_list;
+    private IDENTIFIER_LIST identifierList;
 
     VAR_LIST(Symbol lhs) {
         declaration = new DECLARATION(lhs.children.get(0));
-        identifier_list = IDENTIFIER_LIST.construct(lhs.children.get(1));
+        identifierList = IDENTIFIER_LIST.construct(lhs.children.get(1));
     }
 
     void interpret() {
         declaration.interpret();
-        identifier_list.interpret(declaration.data_type);
+        identifierList.interpret(declaration.dataType);
     }
 }
 
@@ -347,7 +347,7 @@ abstract class IDENTIFIER_LIST {
     public abstract void interpret(DATA_TYPE data_type);
 }
 
-// 20	<identifier_list> → <identifier>
+// 20	<identifierList> → <identifier>
 class IDENTIFIER_LIST_1 extends IDENTIFIER_LIST {
     private Symbol identifier;
 
@@ -362,25 +362,26 @@ class IDENTIFIER_LIST_1 extends IDENTIFIER_LIST {
     }
 }
 
-// 21	<identifier_list> → <comma> <identifier> <identifier_list>
+// 21	<identifierList> → <comma> <identifier> <identifier_list>
 class IDENTIFIER_LIST_2 extends IDENTIFIER_LIST {
     private Symbol identifier;
-    private IDENTIFIER_LIST identifier_list;
+    private IDENTIFIER_LIST identifierList;
+
 
     IDENTIFIER_LIST_2(Symbol lhs) {
         identifier = lhs.children.get(1);
-        identifier_list = IDENTIFIER_LIST.construct(lhs.children.get(2));
+        identifierList = IDENTIFIER_LIST.construct(lhs.children.get(2));
     }
 
     public void interpret(DATA_TYPE data_type) {
         Variable v = new Variable(identifier.lexeme, data_type.interpret(), 0);
         v.value = null;
-        identifier_list.interpret(data_type);
+        identifierList.interpret(data_type);
         System.out.println("\t" + Variable.symbolTable);
     }
 }
 
-// 22	<identifier_list> → ε	<terminator>
+// 22	<identifierList> → ε
 class IDENTIFIER_LIST_3 extends IDENTIFIER_LIST {
     IDENTIFIER_LIST_3() {
     }
@@ -391,18 +392,18 @@ class IDENTIFIER_LIST_3 extends IDENTIFIER_LIST {
 
 // 23	<expression> → <relational_expression> <expression'>
 class EXPR {
-    private RELATIONAL_EXPR relational_expr;
-    private EXPR_PRIME expr_prime;
+    private RELATIONAL_EXPR relationalExpr;
+    private EXPR_PRIME exprPrime;
 
     EXPR(Symbol lhs) {
-        relational_expr = new RELATIONAL_EXPR(lhs.children.get(0));
-        expr_prime = EXPR_PRIME.construct(lhs.children.get(1));
+        relationalExpr = new RELATIONAL_EXPR(lhs.children.get(0));
+        exprPrime = EXPR_PRIME.construct(lhs.children.get(1));
     }
 
     Object interpret() {
-        Object result = expr_prime.interpret(relational_expr);
+        Object result = exprPrime.interpret(relationalExpr);
         if (result == null) {
-            result = relational_expr.interpret();
+            result = relationalExpr.interpret();
         }
         return result;
     }
@@ -425,24 +426,24 @@ abstract class EXPR_PRIME {
 
 // 24	<expression'> → <logical_operator> <relational_expression> <expression'>
 class EXPR_PRIME_1 extends EXPR_PRIME {
-    private Symbol logical_operator;
-    private RELATIONAL_EXPR relational_expr;
-    private EXPR_PRIME expr_prime;
+    private Symbol logicalOperator;
+    private RELATIONAL_EXPR relationalExpr;
+    private EXPR_PRIME exprPrime;
 
     EXPR_PRIME_1(Symbol lhs) {
-        logical_operator = lhs.children.get(0);
-        relational_expr = new RELATIONAL_EXPR(lhs.children.get(1));
-        expr_prime = EXPR_PRIME.construct(lhs.children.get(0));
+        logicalOperator = lhs.children.get(0);
+        relationalExpr = new RELATIONAL_EXPR(lhs.children.get(1));
+        exprPrime = EXPR_PRIME.construct(lhs.children.get(0));
     }
 
     public Object interpret(RELATIONAL_EXPR relational_expr) {
-        switch (logical_operator.lexeme) {
+        switch (logicalOperator.lexeme) {
             case "and":
-                return (Boolean) this.relational_expr.interpret() && (Boolean) relational_expr.interpret();
+                return (Boolean) this.relationalExpr.interpret() && (Boolean) relational_expr.interpret();
             case "or":
-                return (Boolean) this.relational_expr.interpret() || (Boolean) relational_expr.interpret();
+                return (Boolean) this.relationalExpr.interpret() || (Boolean) relational_expr.interpret();
             default:
-                return expr_prime.interpret(relational_expr);
+                return exprPrime.interpret(relational_expr);
         }
     }
 }
@@ -457,20 +458,20 @@ class EXPR_PRIME_2 extends EXPR_PRIME {
     }
 }
 
-// 26	<relational_expression> → <relational_operand> <relational_expression'>
+// 26	<relational_expression> → <relationalOperand> <relational_expression'>
 class RELATIONAL_EXPR {
-    private RELATIONAL_OPERAND relational_operand;
-    private RELATIONAL_EXPR_PRIME relational_expr_prime;
+    private RELATIONAL_OPERAND relationalOperand;
+    private RELATIONAL_EXPR_PRIME relationalExprPrime;
 
     RELATIONAL_EXPR(Symbol lhs) {
-        relational_operand = RELATIONAL_OPERAND.construct(lhs.children.get(0));
-        relational_expr_prime = RELATIONAL_EXPR_PRIME.construct(lhs.children.get(1));
+        relationalOperand = RELATIONAL_OPERAND.construct(lhs.children.get(0));
+        relationalExprPrime = RELATIONAL_EXPR_PRIME.construct(lhs.children.get(1));
     }
 
     Object interpret() {
-        Object result = relational_expr_prime.interpret(relational_operand);
+        Object result = relationalExprPrime.interpret(relationalOperand);
         if (result == null) {
-            result = relational_operand.interpret();
+            result = relationalOperand.interpret();
         }
         return result;
     }
@@ -493,21 +494,21 @@ abstract class RELATIONAL_EXPR_PRIME {
 
 // 27	<relational_expression'> → <relational_operator> <relational_operand> <relational_expression'>
 class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
-    private Symbol relational_operator;
-    private RELATIONAL_OPERAND relational_operand;
+    private Symbol relationalOperator;
+    private RELATIONAL_OPERAND relationalOperand;
 
     RELATIONAL_EXPR_PRIME_1(Symbol lhs) {
-        relational_operator = lhs.children.get(0);
-        relational_operand = RELATIONAL_OPERAND.construct(lhs.children.get(1));
+        relationalOperator = lhs.children.get(0);
+        relationalOperand = RELATIONAL_OPERAND.construct(lhs.children.get(1));
     }
 
     public Object interpret(RELATIONAL_OPERAND relational_operand) {
         Object temp1, temp2;
         temp1 = relational_operand.interpret();
-        temp2 = this.relational_operand.interpret();
+        temp2 = this.relationalOperand.interpret();
         if (temp1 instanceof Integer) {
             if (temp2 instanceof Integer) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return (Integer) temp1 > (Integer) temp2;
                     case "<":
@@ -522,7 +523,7 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return !(temp1.equals(temp2));
                 }
             } else if (temp2 instanceof Float) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return (Integer) temp1 > (Float) temp2;
                     case "<":
@@ -537,22 +538,22 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return ((Integer) temp1).intValue() != ((Float) temp2).floatValue();
                 }
             } else if (temp2 instanceof Character) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
-                        return (Integer) temp1 > (Character) temp2;
+                        return (Integer) temp1 > (int)(Character) temp2;
                     case "<":
-                        return (Integer) temp1 < (Character) temp2;
+                        return (Integer) temp1 < (int)(Character) temp2;
                     case ">=":
-                        return (Integer) temp1 >= (Character) temp2;
+                        return (Integer) temp1 >= (int)(Character) temp2;
                     case "<=":
-                        return (Integer) temp1 <= (Character) temp2;
+                        return (Integer) temp1 <= (int)(Character) temp2;
                     case "==":
-                        return ((Integer) temp1).intValue() == (Character) temp2;
+                        return (Integer) temp1 == (int)(Character) temp2;
                     case "!=":
-                        return ((Integer) temp1).intValue() != (Character) temp2;
+                        return (Integer) temp1 != (int)(Character) temp2;
                 }
             } else if (temp2 instanceof String) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return (Integer) temp1 > ((String) temp2).length();
                     case "<":
@@ -567,12 +568,11 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return (Integer) temp1 != ((String) temp2).length();
                 }
             } else {
-                System.out.println("Error");
-                return "";
+                return false;
             }
         } else if (temp1 instanceof Float) {
             if (temp2 instanceof Integer) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return (Float) temp1 > (Integer) temp2;
                     case "<":
@@ -587,7 +587,7 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return ((Float) temp1).floatValue() != ((Integer) temp2).intValue();
                 }
             } else if (temp2 instanceof Float) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return (Float) temp1 > (Float) temp2;
                     case "<":
@@ -602,22 +602,22 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return !temp1.equals(temp2);
                 }
             } else if (temp2 instanceof Character) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
-                        return (Float) temp1 > (Character) temp2;
+                        return (Float) temp1 > (int)(Character) temp2;
                     case "<":
-                        return (Float) temp1 < (Character) temp2;
+                        return (Float) temp1 < (int)(Character) temp2;
                     case ">=":
-                        return (Float) temp1 >= (Character) temp2;
+                        return (Float) temp1 >= (int)(Character) temp2;
                     case "<=":
-                        return (Float) temp1 <= (Character) temp2;
+                        return (Float) temp1 <= (int)(Character) temp2;
                     case "==":
-                        return ((Float) temp1).floatValue() == (Character) temp2;
+                        return (Float) temp1 == (int)(Character) temp2;
                     case "!=":
-                        return ((Float) temp1).floatValue() != (Character) temp2;
+                        return (Float) temp1 != (int)(Character) temp2;
                 }
             } else if (temp2 instanceof String) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return (Float) temp1 > ((String) temp2).length();
                     case "<":
@@ -632,42 +632,41 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return (Float) temp1 != ((String) temp2).length();
                 }
             } else {
-                System.out.println("Error");
-                return "";
+                return false;
             }
         } else if (temp1 instanceof Character) {
             if (temp2 instanceof Integer) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
-                        return (Character) temp1 > (Integer) temp2;
+                        return (int)(Character) temp1 > (Integer) temp2;
                     case "<":
-                        return (Character) temp1 < (Integer) temp2;
+                        return (int)(Character) temp1 < (Integer) temp2;
                     case ">=":
-                        return (Character) temp1 >= (Integer) temp2;
+                        return (int)(Character) temp1 >= (Integer) temp2;
                     case "<=":
-                        return (Character) temp1 <= (Integer) temp2;
+                        return (int)(Character) temp1 <= (Integer) temp2;
                     case "==":
                         return temp1 == temp2;
                     case "!=":
                         return temp1 != temp2;
                 }
             } else if (temp2 instanceof Float) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
-                        return (Character) temp1 > (Float) temp2;
+                        return (int)(Character) temp1 > (Float) temp2;
                     case "<":
-                        return (Character) temp1 < (Float) temp2;
+                        return (int)(Character) temp1 < (Float) temp2;
                     case ">=":
-                        return (Character) temp1 >= (Float) temp2;
+                        return (int)(Character) temp1 >= (Float) temp2;
                     case "<=":
-                        return (Character) temp1 <= (Float) temp2;
+                        return (int)(Character) temp1 <= (Float) temp2;
                     case "==":
-                        return (Character) temp1 == ((Float) temp2).floatValue();
+                        return (int)(Character) temp1 == (Float) temp2;
                     case "!=":
-                        return (Character) temp1 != ((Float) temp2).floatValue();
+                        return (int)(Character) temp1 != (Float) temp2;
                 }
             } else if (temp2 instanceof Character) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return (Character) temp1 > (Character) temp2;
                     case "<":
@@ -682,12 +681,11 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return temp1 != temp2;
                 }
             } else {
-                System.out.println("Error");
-                return "";
+                return false;
             }
         } else if (temp1 instanceof String) {
             if (temp2 instanceof Integer) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return ((String) temp1).length() > (Integer) temp2;
                     case "<":
@@ -702,7 +700,7 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return ((String) temp1).length() != (Integer) temp2;
                 }
             } else if (temp2 instanceof Float) {
-                switch (relational_operator.lexeme) {
+                switch (relationalOperator.lexeme) {
                     case ">":
                         return ((String) temp1).length() > (Float) temp2;
                     case "<":
@@ -717,13 +715,12 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                         return ((String) temp1).length() != (Float) temp2;
                 }
             } else {
-                System.out.println("Error");
-                return "";
+                return false;
             }
         } else {
-            return "";
+            return false;
         }
-        return "";
+        return false;
     }
 }
 
@@ -760,89 +757,89 @@ abstract class RELATIONAL_OPERAND {
     public abstract Object interpret();
 }
 
-// 29	<relational_operand> → <boolean_constant>
+// 29	<relationalOperand> → <booleanConstant>
 class RELATIONAL_OPERAND_1 extends RELATIONAL_OPERAND {
-    private Symbol boolean_constant;
+    private Symbol booleanConstant;
 
     RELATIONAL_OPERAND_1(Symbol lhs) {
-        boolean_constant = lhs.children.get(0);
+        booleanConstant = lhs.children.get(0);
     }
 
     public Boolean interpret() {
-        return Boolean.parseBoolean(boolean_constant.lexeme);
+        return Boolean.parseBoolean(booleanConstant.lexeme);
     }
 }
 
-// 30	<relational_operand> → <math_expression>
+// 30	<relationalOperand> → <math_xpression>
 class RELATIONAL_OPERAND_2 extends RELATIONAL_OPERAND {
-    private MATH_EXPRESSION math_expression;
+    private MATH_EXPRESSION mathExpression;
 
     RELATIONAL_OPERAND_2(Symbol lhs) {
-        math_expression = new MATH_EXPRESSION(lhs.children.get(0));
+        mathExpression = new MATH_EXPRESSION(lhs.children.get(0));
     }
 
     public Object interpret() {
-        return math_expression.interpret();
+        return mathExpression.interpret();
     }
 }
 
-// 31	<relational_operand> → <integer_constant>
+// 31	<relationalOperand> → <integerConstant>
 class RELATIONAL_OPERAND_3 extends RELATIONAL_OPERAND {
-    private Symbol integer_constant;
+    private Symbol integerConstant;
 
     RELATIONAL_OPERAND_3(Symbol lhs) {
-        integer_constant = lhs.children.get(0);
+        integerConstant = lhs.children.get(0);
     }
 
     public String interpret() {
-        return integer_constant.lexeme;
+        return integerConstant.lexeme;
     }
 }
 
-// 32	<relational_operand> → <integer_constant>
+// 32	<relationalOperand> → <floatConstant>
 class RELATIONAL_OPERAND_4 extends RELATIONAL_OPERAND {
-    private Symbol float_constant;
+    private Symbol floatConstant;
 
     RELATIONAL_OPERAND_4(Symbol lhs) {
-        float_constant = lhs.children.get(0);
+        floatConstant = lhs.children.get(0);
     }
 
     public String interpret() {
-        return float_constant.lexeme;
+        return floatConstant.lexeme;
     }
 }
 
-// 33	<relational_operand> → <string_literal>
+// 33	<relationalOperand> → <stringLiteral>
 class RELATIONAL_OPERAND_5 extends RELATIONAL_OPERAND {
-    private Symbol string_literal;
+    private Symbol stringLiteral;
 
     RELATIONAL_OPERAND_5(Symbol lhs) {
-        string_literal = lhs.children.get(0);
+        stringLiteral = lhs.children.get(0);
     }
 
     public String interpret() {
-        return string_literal.lexeme.substring(1, string_literal.lexeme.length() - 1);
+        return stringLiteral.lexeme.substring(1, stringLiteral.lexeme.length() - 1);
     }
 }
 
-// 34	<relational_operand> → <character_constant>
+// 34	<relationalOperand> → <characterConstant>
 class RELATIONAL_OPERAND_6 extends RELATIONAL_OPERAND {
-    private Symbol character_constant;
+    private Symbol characterConstant;
 
     RELATIONAL_OPERAND_6(Symbol lhs) {
-        character_constant = lhs.children.get(0);
+        characterConstant = lhs.children.get(0);
     }
 
     public String interpret() {
-        return character_constant.lexeme;
+        return characterConstant.lexeme;
     }
 }
 
-// 35	<data_type> → <integer>
-// 36	<data_type> → <float>
-// 37	<data_type> → <boolean>
-// 38	<data_type> → <character>
-// 39	<data_type> → <character_string>
+// 35	<dataType> → <integer>
+// 36	<dataType> → <float>
+// 37	<dataType> → <boolean>
+// 38	<dataType> → <character>
+// 39	<dataType> → <character_string>
 class DATA_TYPE {
     private Symbol type;
 
@@ -855,9 +852,9 @@ class DATA_TYPE {
     }
 }
 
-// 40	<math_expression> → <multiplicative_expression> <math_expression'>
-// 41	<math_expression'> → <additive_operator> <multiplicative_expression> <math_expression'
-// 42	<math_expression'> → ε
+// 40	<mathExpression> → <multiplicative_expression> <mathExpression'>
+// 41	<mathExpression'> → <additive_operator> <multiplicative_expression> <mathExpression'
+// 42	<mathExpression'> → ε
 // 43	<multiplicative_expression> → <term> <multiplicative_expression'>
 // 44	<multiplicative_expression'> → <multiplicative_operator> <term> <multiplicative_expression'>
 // 45	<multiplicative_expression'> → ε
@@ -873,274 +870,435 @@ class MATH_EXPRESSION {
         LinkedList<Symbol> copy = new LinkedList<>(expression);
         while (!copy.isEmpty()) {
             Symbol sym = copy.removeFirst();
-            if (sym.parent.type.equals("<term>")) {
-                //noinspection ConstantConditions
-                operands.push(TERM.construct(sym).interpret());
-            } else if (sym.parent.type.equals("<input>")) {
-                return new INPUT(sym.parent).interpret();
-            } else {
-                Object temp2 = operands.pop();
-                Object temp1 = operands.pop();
-                if (temp1 instanceof Integer) {
-                    if (temp2 instanceof Integer) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Integer) temp1 + (Integer) temp2);
-                                break;
-                            case "-":
-                                operands.push((Integer) temp1 - (Integer) temp2);
-                                break;
-                            case "*":
-                                operands.push((Integer) temp1 * (Integer) temp2);
-                                break;
-                            case "/":
-                                operands.push((Integer) temp1 / (Integer) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Integer) temp1 % (Integer) temp2);
-                                break;
+            switch (sym.parent.type) {
+                case "<term>":
+                    operands.push(TERM.construct(sym).interpret());
+                    break;
+                case "<input>":
+                    return new INPUT(sym.parent).interpret();
+                default:
+                    Object temp2 = operands.pop();
+                    Object temp1 = operands.pop();
+                    if (temp1 instanceof Integer) {
+                        if (temp2 instanceof Integer) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((Integer) temp1 + (Integer) temp2);
+                                    break;
+                                case "-":
+                                    operands.push((Integer) temp1 - (Integer) temp2);
+                                    break;
+                                case "*":
+                                    operands.push((Integer) temp1 * (Integer) temp2);
+                                    break;
+                                case "/":
+                                    operands.push((Integer) temp1 / (Integer) temp2);
+                                    break;
+                                case "mod":
+                                    operands.push((Integer) temp1 % (Integer) temp2);
+                                    break;
+                            }
+                        } else if (temp2 instanceof Float) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((Integer) temp1 + (Float) temp2);
+                                    break;
+                                case "-":
+                                    operands.push((Integer) temp1 - (Float) temp2);
+                                    break;
+                                case "*":
+                                    operands.push((Integer) temp1 * (Float) temp2);
+                                    break;
+                                case "/":
+                                    operands.push((Integer) temp1 / (Float) temp2);
+                                    break;
+                                case "mod":
+                                    operands.push((Integer) temp1 % (Float) temp2);
+                                    break;
+                            }
+                        } else if (temp2 instanceof Character) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((char) (((Integer) temp1 + (Character) temp2)));
+                                    break;
+                                case "-":
+                                    operands.push((char) ((Integer) temp1 - (Character) temp2));
+                                    break;
+                                case "*":
+                                    operands.push((char) ((Integer) temp1 * (Character) temp2));
+                                    break;
+                                case "/":
+                                    operands.push((char) ((Integer) temp1 / (Character) temp2));
+                                    break;
+                                case "mod":
+                                    operands.push((char) ((Integer) temp1 % (Character) temp2));
+                                    break;
+                            }
+                        } else if (temp2 instanceof String) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((String) temp2 + temp1);
+                                    break;
+                                case "*":
+                                    StringBuilder str = new StringBuilder();
+                                    for (int i = 0; i < (Integer) temp1; i++) {
+                                        str.append((String) temp2);
+                                    }
+                                    operands.push(str.toString());
+                                    break;
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'integer' and 'string'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'integer' and 'string'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'integer' and 'string'");
+                                    System.exit(1);
+                            }
+                        } else {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    System.out.println("TypeError: unsupported operand type(s) for +: 'integer' and 'boolean'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'integer' and 'boolean'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'integer' and 'boolean'");
+                                    System.exit(1);
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'integer' and 'boolean'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'integer' and 'boolean'");
+                                    System.exit(1);
+                            }
                         }
-                    } else if (temp2 instanceof Float) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Integer) temp1 + (Float) temp2);
-                                break;
-                            case "-":
-                                operands.push((Integer) temp1 - (Float) temp2);
-                                break;
-                            case "*":
-                                operands.push((Integer) temp1 * (Float) temp2);
-                                break;
-                            case "/":
-                                operands.push((Integer) temp1 / (Float) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Integer) temp1 % (Float) temp2);
-                                break;
+                    } else if (temp1 instanceof Float) {
+                        if (temp2 instanceof Integer) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((Float) temp1 + (Integer) temp2);
+                                    break;
+                                case "-":
+                                    operands.push((Float) temp1 - (Integer) temp2);
+                                    break;
+                                case "*":
+                                    operands.push((Float) temp1 * (Integer) temp2);
+                                    break;
+                                case "/":
+                                    operands.push((Float) temp1 / (Integer) temp2);
+                                    break;
+                                case "mod":
+                                    operands.push((Float) temp1 % (Integer) temp2);
+                                    break;
+                            }
+                        } else if (temp2 instanceof Float) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((Float) temp1 + (Float) temp2);
+                                    break;
+                                case "-":
+                                    operands.push((Float) temp1 - (Float) temp2);
+                                    break;
+                                case "*":
+                                    operands.push((Float) temp1 * (Float) temp2);
+                                    break;
+                                case "/":
+                                    operands.push((Float) temp1 / (Float) temp2);
+                                    break;
+                                case "mod":
+                                    operands.push((Float) temp1 % (Float) temp2);
+                                    break;
+                            }
+                        } else if (temp2 instanceof Character) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((Float) temp1 + (Character) temp2);
+                                    break;
+                                case "-":
+                                    operands.push((Float) temp1 - (Character) temp2);
+                                    break;
+                                case "*":
+                                    operands.push((Float) temp1 * (Character) temp2);
+                                    break;
+                                case "/":
+                                    operands.push((Float) temp1 / (Character) temp2);
+                                    break;
+                                case "mod":
+                                    operands.push((Float) temp1 % (Character) temp2);
+                                    break;
+                            }
+                        } else if (temp2 instanceof String) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push(temp1 + (String) temp2);
+                                    break;
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'string' and 'float'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'string' and 'float'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'string' and 'float'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'string' and 'float'");
+                                    System.exit(1);
+                            }
+                        } else {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    System.out.println("TypeError: unsupported operand type(s) for +: 'float' and 'boolean'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'float' and 'boolean'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'float' and 'boolean'");
+                                    System.exit(1);
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'float' and 'boolean'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'float' and 'boolean'");
+                                    System.exit(1);
+                            }
                         }
-                    } else if (temp2 instanceof Character) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Integer) temp1 + (Character) temp2);
-                                break;
-                            case "-":
-                                operands.push((Integer) temp1 - (Character) temp2);
-                                break;
-                            case "*":
-                                operands.push((Integer) temp1 * (Character) temp2);
-                                break;
-                            case "/":
-                                operands.push((Integer) temp1 / (Character) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Integer) temp1 % (Character) temp2);
-                                break;
+                    } else if (temp1 instanceof Character) {
+                        if (temp2 instanceof Integer) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((char) ((Character) temp1 + (Integer) temp2));
+                                    break;
+                                case "-":
+                                    operands.push((char) ((Character) temp1 - (Integer) temp2));
+                                    break;
+                                case "*":
+                                    operands.push((char) ((Character) temp1 * (Integer) temp2));
+                                    break;
+                                case "/":
+                                    operands.push((char) ((Character) temp1 / (Integer) temp2));
+                                    break;
+                                case "mod":
+                                    operands.push((char) ((Character) temp1 % (Integer) temp2));
+                                    break;
+                            }
+                        } else if (temp2 instanceof Float) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((Character) temp1 + (Float) temp2);
+                                    break;
+                                case "-":
+                                    operands.push((Character) temp1 - (Float) temp2);
+                                    break;
+                                case "*":
+                                    operands.push((Character) temp1 * (Float) temp2);
+                                    break;
+                                case "/":
+                                    operands.push((Character) temp1 / (Float) temp2);
+                                    break;
+                                case "mod":
+                                    operands.push((Character) temp1 % (Float) temp2);
+                                    break;
+                            }
+                        } else if (temp2 instanceof Character) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((char) ((Character) temp1 + (Character) temp2));
+                                    break;
+                                case "-":
+                                    operands.push((char) ((Character) temp1 - (Character) temp2));
+                                    break;
+                                case "*":
+                                    operands.push((char) ((Character) temp1 * (Character) temp2));
+                                    break;
+                                case "/":
+                                    operands.push((char) ((Character) temp1 / (Character) temp2));
+                                    break;
+                                case "mod":
+                                    operands.push((char) ((Character) temp1 % (Character) temp2));
+                                    break;
+                            }
+                        } else {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push(temp1 + (String) temp2);
+                                    break;
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'character' and 'string'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'character' and 'string'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'character' and 'string'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'character' and 'string'");
+                                    System.exit(1);
+                            }
                         }
-                    } else if (temp2 instanceof String) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((String) temp2 + temp1);
-                                break;
-                            case "*":
-                                StringBuilder str = new StringBuilder();
-                                for (int i = 0; i < (Integer) temp1; i++) {
-                                    str.append((String) temp2);
-                                }
-                                operands.push(str.toString());
-                                break;
-                            default:
-                                operands.push("Invalid arithmetic");
+                    } else if (temp1 instanceof String) {
+                        if (temp2 instanceof Integer) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((String) temp1 + temp2);
+                                    break;
+                                case "*":
+                                    StringBuilder str = new StringBuilder();
+                                    for (int i = 0; i < (Integer) temp2; i++) {
+                                        str.append((String) temp1);
+                                    }
+                                    operands.push(str.toString());
+                                    break;
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'string' and 'integer'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'string' and 'integer'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'integer' and 'string'");
+                                    System.exit(1);
+
+                            }
+                        } else if (temp2 instanceof Float) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((String) temp1 + temp2);
+                                    break;
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'float' and 'string'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'float' and 'string'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'float' and 'string'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'float' and 'string'");
+                                    System.exit(1);
+                            }
+                        } else if (temp2 instanceof Character) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((String) temp1 + temp2);
+                                    break;
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'string' and 'character'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'string' and 'character'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'string' and 'character'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'string' and 'character'");
+                                    System.exit(1);
+                            }
+                        } else {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    operands.push((String) temp1 + temp2);
+                                    break;
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'boolean' and 'string'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'boolean' and 'string'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'boolean' and 'string'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'boolean' and 'string'");
+                                    System.exit(1);
+                            }
                         }
                     } else {
-                        operands.push("Invalid arithmetic");
+                        if (temp2 instanceof Integer) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    System.out.println("TypeError: unsupported operand type(s) for +: 'boolean' and 'integer'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'boolean' and 'integer'");
+                                    System.exit(1);
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'boolean' and 'integer'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'boolean' and 'integer'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'boolean' and 'integer'");
+                                    System.exit(1);
+
+                            }
+                        } else if (temp2 instanceof Float) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    System.out.println("TypeError: unsupported operand type(s) for +: 'boolean' and 'integer'");
+                                    System.exit(1);
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'boolean' and 'string'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'boolean' and 'string'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'boolean' and 'string'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'boolean' and 'string'");
+                                    System.exit(1);
+                            }
+                        } else if (temp2 instanceof Character) {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    System.out.println("TypeError: unsupported operand type(s) for +: 'boolean' and 'character'");
+                                    System.exit(1);
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'boolean' and 'character'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'boolean' and 'character'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'boolean' and 'character'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'boolean' and 'character'");
+                                    System.exit(1);
+                            }
+                        } else {
+                            switch (sym.lexeme) {
+                                case "+":
+                                    System.out.println("TypeError: unsupported operand type(s) for +: 'boolean' and 'boolean'");
+                                    System.exit(1);
+                                case "/":
+                                    System.out.println("TypeError: unsupported operand type(s) for /: 'boolean' and 'boolean'");
+                                    System.exit(1);
+                                case "mod":
+                                    System.out.println("TypeError: unsupported operand type(s) for mod: 'boolean' and 'boolean'");
+                                    System.exit(1);
+                                case "-":
+                                    System.out.println("TypeError: unsupported operand type(s) for -: 'boolean' and 'boolean'");
+                                    System.exit(1);
+                                case "*":
+                                    System.out.println("TypeError: unsupported operand type(s) for *: 'boolean' and 'boolean'");
+                                    System.exit(1);
+                            }
+                        }
                     }
-                } else if (temp1 instanceof Float) {
-                    if (temp2 instanceof Integer) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Float) temp1 + (Integer) temp2);
-                                break;
-                            case "-":
-                                operands.push((Float) temp1 - (Integer) temp2);
-                                break;
-                            case "*":
-                                operands.push((Float) temp1 * (Integer) temp2);
-                                break;
-                            case "/":
-                                operands.push((Float) temp1 / (Integer) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Float) temp1 % (Integer) temp2);
-                                break;
-                        }
-                    } else if (temp2 instanceof Float) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Float) temp1 + (Float) temp2);
-                                break;
-                            case "-":
-                                operands.push((Float) temp1 - (Float) temp2);
-                                break;
-                            case "*":
-                                operands.push((Float) temp1 * (Float) temp2);
-                                break;
-                            case "/":
-                                operands.push((Float) temp1 / (Float) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Float) temp1 % (Float) temp2);
-                                break;
-                        }
-                    } else if (temp2 instanceof Character) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Float) temp1 + (Character) temp2);
-                                break;
-                            case "-":
-                                operands.push((Float) temp1 - (Character) temp2);
-                                break;
-                            case "*":
-                                operands.push((Float) temp1 * (Character) temp2);
-                                break;
-                            case "/":
-                                operands.push((Float) temp1 / (Character) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Float) temp1 % (Character) temp2);
-                                break;
-                        }
-                    } else if (temp2 instanceof String) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push(temp1 + (String) temp2);
-                                break;
-                            default:
-                                operands.push("Invalid arithmetic");
-                        }
-                    } else {
-                        operands.push("Invalid arithmetic");
-                    }
-                } else if (temp1 instanceof Character) {
-                    if (temp2 instanceof Integer) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Character) temp1 + (Integer) temp2);
-                                break;
-                            case "-":
-                                operands.push((Character) temp1 - (Integer) temp2);
-                                break;
-                            case "*":
-                                operands.push((Character) temp1 * (Integer) temp2);
-                                break;
-                            case "/":
-                                operands.push((Character) temp1 / (Integer) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Character) temp1 % (Integer) temp2);
-                                break;
-                        }
-                    } else if (temp2 instanceof Float) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Character) temp1 + (Float) temp2);
-                                break;
-                            case "-":
-                                operands.push((Character) temp1 - (Float) temp2);
-                                break;
-                            case "*":
-                                operands.push((Character) temp1 * (Float) temp2);
-                                break;
-                            case "/":
-                                operands.push((Character) temp1 / (Float) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Character) temp1 % (Float) temp2);
-                                break;
-                        }
-                    } else if (temp2 instanceof Character) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((Character) temp1 + (Character) temp2);
-                                break;
-                            case "-":
-                                operands.push((Character) temp1 - (Character) temp2);
-                                break;
-                            case "*":
-                                operands.push((Character) temp1 * (Character) temp2);
-                                break;
-                            case "/":
-                                operands.push((Character) temp1 / (Character) temp2);
-                                break;
-                            case "mod":
-                                operands.push((Character) temp1 % (Character) temp2);
-                                break;
-                        }
-                    } else {
-                        ifString(sym, temp2, temp1);
-                    }
-                } else if (temp1 instanceof String) {
-                    if (temp2 instanceof Integer) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((String) temp1 + temp2);
-                                break;
-                            case "*":
-                                StringBuilder str = new StringBuilder();
-                                for (int i = 0; i < (Integer) temp2; i++) {
-                                    str.append((String) temp1);
-                                }
-                                operands.push(str.toString());
-                                break;
-                            default:
-                                operands.push("Invalid Arithmetic");
-                                break;
-                        }
-                    } else if (temp2 instanceof Float) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((String) temp1 + temp2);
-                                break;
-                            default:
-                                operands.push("Invalid Arithmetic");
-                                break;
-                        }
-                    } else if (temp2 instanceof Character) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((String) temp1 + temp2);
-                                break;
-                            default:
-                                operands.push("Invalid Arithmetic");
-                                break;
-                        }
-                    } else if (temp2 instanceof Boolean) {
-                        switch (sym.lexeme) {
-                            case "+":
-                                operands.push((String) temp1 + temp2);
-                                break;
-                            default:
-                                operands.push("Invalid Arithmetic");
-                                break;
-                        }
-                    } else ifString(sym, temp2, temp1);
-                } else {
-                    operands.push("Invalid arithmetic");
-                }
             }
         }
         return operands.pop();
-    }
-
-    private void ifString(Symbol sym, Object temp2, Object temp1) {
-        if (temp2 instanceof String) {
-            if (sym.lexeme.equals("+")) {
-                operands.push((String) temp2 + temp1);
-            } else {
-                operands.push("Invalid arithmetic");
-            }
-        } else {
-            operands.push("Invalid arithmetic");
-        }
     }
 }
 
@@ -1180,11 +1338,16 @@ class TERM_1 extends TERM {
     Object interpret() {
         String value = (String) Variable.symbolTable.get(identifier.lexeme).value;
         switch (Variable.symbolTable.get(identifier.lexeme).type) {
-            case "integer":return Integer.parseInt(value);
-            case "float": return Float.parseFloat(value);
-            case "character": return value.charAt(0);
-            case "boolean": return Boolean.parseBoolean(value);
-            default: return value;
+            case "integer":
+                return Integer.parseInt(value);
+            case "float":
+                return Float.parseFloat(value);
+            case "character":
+                return value.charAt(0);
+            case "boolean":
+                return Boolean.parseBoolean(value);
+            default:
+                return value;
         }
     }
 }
@@ -1204,65 +1367,65 @@ class TERM_2 extends TERM {
 
 // 48	<term> → <float_constant>
 class TERM_3 extends TERM {
-    private Symbol float_constant;
+    private Symbol floatConstant;
 
     TERM_3(Symbol lhs) {
-        float_constant = lhs.children.get(0);
+        floatConstant = lhs.children.get(0);
     }
 
     Float interpret() {
-        return Float.parseFloat(float_constant.lexeme);
+        return Float.parseFloat(floatConstant.lexeme);
     }
 }
 
 // 49	<term> → <integer_constant>
 class TERM_4 extends TERM {
-    private Symbol integer_constant;
+    private Symbol integerConstant;
 
     TERM_4(Symbol lhs) {
-        integer_constant = lhs.children.get(0);
+        integerConstant = lhs.children.get(0);
     }
 
     Integer interpret() {
-        return Integer.parseInt(integer_constant.lexeme);
+        return Integer.parseInt(integerConstant.lexeme);
     }
 }
 
 // 50	<term> → <character_constant>
 class TERM_5 extends TERM {
-    private Symbol character_constant;
+    private Symbol characterConstant;
 
     TERM_5(Symbol lhs) {
-        character_constant = lhs.children.get(0);
+        characterConstant = lhs.children.get(0);
     }
 
     Character interpret() {
-        return character_constant.lexeme.charAt(1);
+        return characterConstant.lexeme.charAt(1);
     }
 }
 
 // 51	<term> → <string_literal>
 class TERM_6 extends TERM {
-    private Symbol string_literal;
+    private Symbol stringLiteral;
 
     TERM_6(Symbol lhs) {
-        string_literal = lhs.children.get(0);
+        stringLiteral = lhs.children.get(0);
     }
 
     String interpret() {
-        return string_literal.lexeme.substring(1, string_literal.lexeme.length() - 1);
+        return stringLiteral.lexeme.substring(1, stringLiteral.lexeme.length() - 1);
     }
 }
 
 // 52	<term> → <boolean_constant>
 class TERM_7 extends TERM {
-    private Symbol boolean_constant;
+    private Symbol booleanConstant;
 
     TERM_7(Symbol lhs) {
-        boolean_constant = lhs.children.get(0);
+        booleanConstant = lhs.children.get(0);
     }
 
     Boolean interpret() {
-        return Boolean.parseBoolean(boolean_constant.lexeme);
+        return Boolean.parseBoolean(booleanConstant.lexeme);
     }
 }

@@ -1,11 +1,4 @@
 program SampleProgram
 begin
-    integer x = input("Please enter an integer");
-    if(x mod 2 == 0) {
-    	print("The integer is even.");
-    }
-
-    if(x mod 2 != 0) {
-    	print("The integer is odd.");
-    }
+    print(66 > 'A');
 end
