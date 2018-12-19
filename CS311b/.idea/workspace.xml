@@ -4,40 +4,9 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93df12b8-3061-46bc-801e-88a9652f9aa0" name="Default Changelist" comment="update relational expression">
+    <list default="true" id="93df12b8-3061-46bc-801e-88a9652f9aa0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/CompilerDesign.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/CompilerDesign.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/DATA_TYPE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/DATA_TYPE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/DECLARATION.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/DECLARATION.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/EXPR_PRIME_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IDENTIFIER_LIST_3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IF_STMT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/IF_STMT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/MATH_EXPRESSION.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/MATH_EXPRESSION.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_EXPR_PRIME_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/RELATIONAL_OPERAND_6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/STMT_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/STMT_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/STMT_4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/STMT_4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/STMT_5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/STMT_5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/STMT_LIST_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/STMT_LIST_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/TERM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/TERM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/VAR_LIST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/VAR_LIST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/WHILE_STMT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS311b/edu/slu/cs311b/WHILE_STMT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/program.txt" beforeDir="false" afterPath="$PROJECT_DIR$/program.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,29 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/program.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            <state relative-caret-position="68">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="5" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-893">
-              <caret line="665" column="70" lean-forward="true" selection-start-line="665" selection-start-column="70" selection-end-line="665" selection-end-column="70" />
+            <state relative-caret-position="132">
+              <caret line="1338" column="82" selection-start-line="1338" selection-start-column="82" selection-end-line="1338" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1545138698127" expanded="true" signature="54014:54434" ph="..." />
@@ -180,8 +140,8 @@
         <option value="$PROJECT_DIR$/follow.txt" />
         <option value="$PROJECT_DIR$/predict.txt" />
         <option value="$PROJECT_DIR$/src/edu/slu/cs311b/CompilerDesign.java" />
-        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" />
         <option value="$PROJECT_DIR$/program.txt" />
+        <option value="$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java" />
       </list>
     </option>
   </component>
@@ -192,10 +152,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -203,8 +162,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,6 +182,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="cs311b" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CS311b" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS311b" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs311b" type="462c0819:PsiDirectoryNode" />
+              <item name="Interpreter.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -234,6 +200,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544505459881" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -244,6 +211,11 @@
       <recent name="C:\Users\P_Darson\Desktop\CS311b\src\edu\slu\cs311b" />
       <recent name="C:\Users\P_Darson\Desktop\CS311b" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="?" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -401,7 +373,8 @@
       <workItem from="1545124552028" duration="239000" />
       <workItem from="1545124973635" duration="2137000" />
       <workItem from="1545127409324" duration="229000" />
-      <workItem from="1545134977270" duration="3593000" />
+      <workItem from="1545134977270" duration="5134000" />
+      <workItem from="1545211400173" duration="206000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1544960538150</created>
@@ -431,39 +404,63 @@
       <option name="project" value="LOCAL" />
       <updated>1545124215894</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update relational expression">
+      <created>1545139130468</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1545139130468</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update relational expression">
+      <created>1545140704018</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545140704018</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126513000" />
+    <option name="totallyTimeSpent" value="128297000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22541603" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22844176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Duplicate detector" weight="0.32872504" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31797236" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39016896" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32872504" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32765958" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Tool Output" order="12" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="13" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32907802" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Duplicate detector" order="0" weight="0.32872504" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32872504" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.31797236" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39016896" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32872504" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32872504" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32872504" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32765958" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Tool Output" order="13" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="14" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -504,6 +501,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
@@ -518,6 +529,18 @@
           <line>66</line>
           <properties />
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1339</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
+          <line>1341</line>
+          <properties />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -658,21 +681,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java">
+    <entry file="file://$PROJECT_DIR$/program.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-893">
-          <caret line="665" column="70" lean-forward="true" selection-start-line="665" selection-start-column="70" selection-end-line="665" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1545138698127" expanded="true" signature="54014:54434" ph="..." />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/program.txt">
+    <entry file="file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        <state relative-caret-position="132">
+          <caret line="1338" column="76" selection-start-line="1338" selection-start-column="76" selection-end-line="1338" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1545138698127" expanded="true" signature="54011:54431" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

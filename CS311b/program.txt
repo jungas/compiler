@@ -1,8 +1,5 @@
 program SampleProgram
 begin
-    string name = input("Enter name: ");
-    integer age = input("Enter age: ");
-
-    print("Hello, my name is " + name + " and I’m " + age + " years old.");
-
+    character x = 'A';
+    print(x + 1);
 end

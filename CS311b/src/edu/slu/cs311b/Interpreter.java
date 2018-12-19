@@ -1336,7 +1336,7 @@ class TERM_1 extends TERM {
     }
 
     Object interpret() {
-        String value = (String) Variable.symbolTable.get(identifier.lexeme).value;
+        String value =  Variable.symbolTable.get(identifier.lexeme).value + "";
         switch (Variable.symbolTable.get(identifier.lexeme).type) {
             case "integer":
                 return Integer.parseInt(value);
