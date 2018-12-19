@@ -1,5 +1,116 @@
-program SampleProgram
+program Random
 begin
-    character x = 'A';
-    print(x + 1);
+    boolean flag = true;
+
+    while(flag) {
+        print("---------- Random Programs ----------");
+        print("|1.Basic Calculator                 |");
+        print("|2.Short Quiz                       |");
+        print("|3.Exit                             |");
+        print("-------------------------------------");
+        print(" ");
+
+        integer choice = input("Enter the number of your choice: ");
+
+        if(choice == 1) {
+            print("----- Basic Calculator -----");
+            print("|1. Add                    |");
+            print("|2. Subtract               |");
+            print("|3. Multiply               |");
+            print("|4. Divide                 |");
+            print("|5. Modulo                 |");
+            print("----------------------------");
+
+            integer calChoice = input("Enter the number of your choice: ");
+            integer firstInt = input("Enter first integer: ");
+            integer secondInt = input("Enter second integer: ");
+
+            if(calChoice == 1) {
+                integer sum = firstInt + secondInt;
+                print("Sum: " + sum);
+            }
+
+            if(calChoice == 2) {
+                integer difference = firstInit - secondInt;
+                print("Difference: " + difference);
+            }
+
+            if(calChoice == 3) {
+                integer product = firstInt * secondInt;
+                print("Product: " + product);
+            }
+
+            if(calChoice == 4) {
+                integer quotient = firstInt / secondInt;
+                print("Quotient: " + quotient);
+            }
+
+            if(calChoice == 5) {
+                integer remainder = firstInt mod secondInt;
+                print("Remainder: " + remainder);
+            }
+        }
+        if(choice == 2) {
+            integer score = 0;
+
+            string ansOne   = "compiler";
+            string ansTwo   = "interpreter";
+            string ansThree = "programming";
+            string ansFour  = "design";
+            string ansFive  = "bnf";
+
+            print("----- Short Quiz -----");
+            print("Special program that processes statements written in a particular");
+            print("programming language and turns them into machine language.");
+
+            if(ansOne == userAnsOne) {
+                score = score + 1;
+                print(score);
+            }
+
+            print("Computer program that directly executes, i.e. performs, instructions");
+            print("written in a programming or scripting language, without requiring them");
+            print("previously to have been compiled into a machine language program.");
+
+            string userAnsTwo = input("Enter your answer here: ");
+
+            if(ansTwo == userAnsTwo) {
+                score = score + 1;
+                print(score);
+            }
+
+            print("The action or process of writing computer programs.");
+
+            string userAnsThree = input("Enter your answer here: ");
+
+            if(ansThree == userAnsThree) {
+                score = score + 1;
+                print(score);
+            }
+
+            print("A plan or drawing produced to show the look and function or workings.");
+
+            string userAnsFour = input("Enter your answer here: ");
+
+            if(ansFour == userAnsFour) {
+                score = score + 1;
+                print(score);
+            }
+
+            print("Rearrange the following to form a Compiler Design Concept: fnb");
+
+            string userAnsFive = input("Enter your answer here: ");
+
+            if(ansFive == userAnsFive) {
+                score = score + 1;
+                print(score);
+            }
+
+            print("Score: " + score);
+        }
+        if(choice == 3) {
+            print("Thank you, Goodbye!!!");
+            flag = false;
+        }
+    }
 end

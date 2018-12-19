@@ -194,7 +194,7 @@ class DECLARATION {
     void interpret() {
         Variable v = new Variable(identifier.lexeme, dataType.interpret(), 0);
         v.value = declarationPrime.interpret();
-        System.out.println("\t" + Variable.symbolTable);
+//        System.out.println("\t" + Variable.symbolTable);
     }
 }
 
@@ -309,7 +309,7 @@ class INPUT {
     }
 
     String interpret() {
-        System.out.println(expr.interpret());
+        System.out.print(expr.interpret());
         return new Scanner(System.in).nextLine();
     }
 }
@@ -358,7 +358,7 @@ class IDENTIFIER_LIST_1 extends IDENTIFIER_LIST {
     public void interpret(DATA_TYPE data_type) {
         Variable v = new Variable(identifier.lexeme, data_type.interpret(), 0);
         v.value = null;
-        System.out.println("\t" + Variable.symbolTable);
+//        System.out.println("\t" + Variable.symbolTable);
     }
 }
 
@@ -377,7 +377,7 @@ class IDENTIFIER_LIST_2 extends IDENTIFIER_LIST {
         Variable v = new Variable(identifier.lexeme, data_type.interpret(), 0);
         v.value = null;
         identifierList.interpret(data_type);
-        System.out.println("\t" + Variable.symbolTable);
+//        System.out.println("\t" + Variable.symbolTable);
     }
 }
 
@@ -714,7 +714,22 @@ class RELATIONAL_EXPR_PRIME_1 extends RELATIONAL_EXPR_PRIME {
                     case "!=":
                         return ((String) temp1).length() != (Float) temp2;
                 }
-            } else {
+            }  else if (temp2 instanceof String) {
+                switch (relationalOperator.lexeme) {
+                    case ">":
+                        return ((String) temp1).compareTo((String) temp2) > 0;
+                    case "<":
+                        return ((String) temp1).compareTo((String) temp2) < 0;
+                    case ">=":
+                        return ((String) temp1).compareTo((String) temp2) >= 0;
+                    case "<=":
+                        return ((String) temp1).compareTo((String) temp2) <= 0;
+                    case "==":
+                        return temp1.equals(temp2);
+                    case "!=":
+                        return !temp1.equals(temp2);
+                }
+            }else {
                 return false;
             }
         } else {
