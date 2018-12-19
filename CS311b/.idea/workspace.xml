@@ -371,7 +371,7 @@
       <workItem from="1545124973635" duration="2137000" />
       <workItem from="1545127409324" duration="229000" />
       <workItem from="1545134977270" duration="5134000" />
-      <workItem from="1545211400173" duration="206000" />
+      <workItem from="1545211400173" duration="473000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1544960538150</created>
@@ -526,18 +526,6 @@
           <line>66</line>
           <properties />
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
-          <line>1339</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/edu/slu/cs311b/Interpreter.java</url>
-          <line>1341</line>
-          <properties />
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
